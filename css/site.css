@@ -1,5 +1,5 @@
 #content {
-  margin: 10px;080;
+  margin: 10px;
   padding: 10px;
   border: solid 1px #808
 }
@@ -7,4 +7,11 @@
 .minor-section {
   padding: 10px;
   border: solid 1px #A0A0A0;
+}
+
+.center-square{
+  width: 1400px;
+  margin: auto;
+  background-color: #FFF4A3;
+  text-align: center;
 }
