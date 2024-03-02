@@ -1,10 +1,10 @@
-# Creative Coding Template
+# BRENDAN's PROJECT IDEA
 Brendan's idea of how this will look
-start at Homepage
-Homepage describes company, job, or whatever
-Homepage can go to blog x, blog y, blog z
-blog x/y/z can go to Homepage
-maybe play around with simple javascript to check off something to say that you read it
+1. start at Homepage
+2. Homepage describes company, job, or whatever
+3. Homepage can go to blog x, blog y, blog z
+4. blog x/y/z can go to Homepage
+5. maybe play around with simple javascript to check off something to say that you read it
 
 
 ## InstallFest
