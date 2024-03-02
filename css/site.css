@@ -9,9 +9,12 @@
   border: solid 1px #A0A0A0;
 }
 
+/*
+Used by Brendan to test out a homepage look
+*/
 .center-square{
-  width: 1400px;
+  width: 1000px;
   margin: auto;
-  background-color: #FFF4A3;
+  background-color: #fff7bbe1;
   text-align: center;
 }
