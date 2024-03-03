@@ -15,11 +15,13 @@
   border: 1px solid black;
 }
 
+/* Affects all table cells */
 td{
   background-color: white;
   border: 1px solid black;
 }
 
-.flag{
+/* Flag for review buttons */
+.flag-for-review{
   background-color: yellow;
 }
