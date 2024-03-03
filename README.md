@@ -6,4 +6,10 @@ Brendan's idea of how this will look
 maybe play around with simple javascript so you can check off a blog to say that it was read
 
 ## ROLES
-1. Brendan assigned himself to blog 3 because yeah
+1. Adrian: home page
+2. Aria: home page
+3. Brendan: home page
+4. 
+5. Kayle: blog 1
+6. Atal: blog 2
+7. 

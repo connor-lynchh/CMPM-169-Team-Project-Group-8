@@ -8,10 +8,15 @@ canvas {
 
 /* Center the canvas element on the page */
 body {
+    margin-top: 50px;
     margin-bottom: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+button{
+    margin-left : 100%;
 }
 
 .author{
@@ -30,6 +35,10 @@ body {
   width: 850px;
   border: solid 1px black;
   background-color: #fffad7e1;
-  text-align: center;
 }
 
+img {
+    float: left;
+    width: 20%;
+    border: solid 3px black;
+}

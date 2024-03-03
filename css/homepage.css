@@ -3,3 +3,8 @@
   margin: 10px;
   max-width: 500px;
 }
+
+.blog-table{
+  width: 900px;
+  border: 1px solid grey;
+}
