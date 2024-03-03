@@ -9,11 +9,6 @@
   border: 1px solid grey;
 }
 
-.blogs-cell{
-  background-color: white;
-  border: 1px solid black;
-}
-
 /* Affects all table cells */
 td{
   background-color: white;
@@ -25,5 +20,7 @@ td{
   background-color: yellow;
 }
 .H1toH5 input { display: none; }
-.H1toH5 .seatButton { padding: 5px; border: 1px solid #ccc; background: yellow; }
-.H1toH5 input:checked + .seatButton { background: rgb(21, 255, 0); }
+.H1toH5 .reviewButton { padding: 3px; border: 1px solid #000000; background: yellow; }
+.H1toH5 input:checked + .reviewButton { background: rgb(48, 255, 30); }
+.H1toH5 .readButton { padding: 3px; border: 1px solid #000000; background: rgb(255, 255, 255); }
+.H1toH5 input:checked + .readButton { background: rgb(160, 160, 160); }
