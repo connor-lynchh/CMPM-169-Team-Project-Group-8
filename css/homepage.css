@@ -4,7 +4,22 @@
   max-width: 500px;
 }
 
-.blog-table{
+.blogs-table{
   width: 900px;
+  background-color: rgb(225, 225, 225);
   border: 1px solid grey;
+}
+
+.blogs-cell{
+  background-color: white;
+  border: 1px solid black;
+}
+
+td{
+  background-color: white;
+  border: 1px solid black;
+}
+
+.flag{
+  background-color: yellow;
 }
