@@ -15,8 +15,32 @@
 	<!-- Link to javascript file - DEFER waits until all elements are rendered -->
 	<script type="text/javascript" src="./js/experiment.js"></script>
 </head>
+<script>
+	function login(event) {
+	  event.preventDefault(); // Prevent form from submitting and refreshing the page
+	  var username = document.getElementById('username').value;
+	  var password = document.getElementById('password').value;
+	  if(username && password) { // Checks if username and password are not empty
+		document.getElementById('loginForm').style.display = 'none'; // Hide login form
+		document.getElementById('content').style.display = 'block'; // Show main content
+	  } else {
+		alert("Please enter both username and password.");
+	  }
+	}
+	</script>
 <body>
-	<main id="content">
+	<div id="loginForm" style="position: absolute; width: 100%; height: 100%; background-color: white; display: flex; justify-content: center; align-items: center;">
+		<form onsubmit="login(event)">
+		  <div style="padding: 20px; border: 1px solid #ccc; background-color: #f9f9f9;">
+			<label for="username">Username:</label><br>
+			<input type="text" id="username" name="username" required><br>
+			<label for="password">Password:</label><br>
+			<input type="password" id="password" name="password" required><br><br>
+			<input type="submit" value="Login">
+		  </div>
+		</form>
+	  </div>
+	  <main id="content" style="display:none;">
 		<section>
 			<table width="100%" height="100%" border="5">
  				 <tbody>
