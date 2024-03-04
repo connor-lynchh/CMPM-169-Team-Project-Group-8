@@ -1,5 +1,7 @@
 /* style.css */
-
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 /* Set the canvas element to be the full size of the window */
 canvas {
     width: 100%;

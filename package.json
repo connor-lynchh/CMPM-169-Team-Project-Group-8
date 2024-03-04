@@ -1,0 +1,14 @@
+{
+  "name": "cmpm-169-team-project-group-8",
+  "version": "1.0.0",
+  "description": "Brendan's idea of how this will look 1. start at Homepage (describes company, job, or whatever) 3. Homepage can go to blog x, blog y, blog z 4. blog x/y/z can go to Homepage maybe play around with simple javascript so you can check off a blog to say that it was read",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.4.1"
+  }
+}
