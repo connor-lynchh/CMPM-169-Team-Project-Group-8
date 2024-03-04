@@ -24,26 +24,41 @@
 	<!-- Use me for a p5.js project -->
 	<!-- <script type="text/javascript" src="./js/sketch.js" DEFER></script> -->
 	<link rel="stylesheet" href="./css/output.css">
+	<script src="./js/audio.js"></script>
 </head>
 <body>
 	<!-- Style this page by changing the CSS in ../css/site.css or css/experiment.css -->
 	<main id="content">
 		<div class=" relative">
 			<button 
-				class="mx-4 p-4 bg-gray-700 text-white rounded-lg shrink max-w-28 max-h-20 shadow absolute top-5 hover:bg-gray-800 hover:scale-110 text-lg shadow " 
+				class="mx-4 p-4 cursor-pointer bg-gray-700 text-white rounded-lg shrink max-w-28 max-h-20 shadow absolute top-5 hover:bg-gray-800 hover:scale-110 text-lg shadow " 
 				type="button" onclick="window.location.href='../index.html';"
 				>Home
 			</button>
 			<div class="">
-				<img class='w-full h-[55vh]'src="./skinwalker.jpg" alt="skinwalker image" ">
+				<img class='w-full h-[55vh]'src="./assets/skinwalker.jpg" alt="skinwalker image" ">
+				<div class="absolute rounded-full p-8"> 
+					
+					<button
+						type="button"
+						id="pauseBtn"
+						class="hover:scale-110 cursor-pointer"
+					>
+					<img src="./assets/mute.png" alt="mute" class="w-14 p-2 text-white">
+					</button>
+				</div>
 			</div>
+			<audio id="bgMusic" autoplay loop>
+				<source src="./assets/tearsOf.ogg" type="audio/mpeg">
+				Your browser does not support the audio element.
+			</audio>
 		</div>
 		
 		<section class="bg-gray-800 text-white p-5">
 			
 			<div class="flex justify-center">
 				<h1 class="text-5xl p-4 pt-6">My </h1>
-				<img src="./assets/wa1.jpg" alt="image of waifu" class="w-30 h-28 rounded-full transition-transform  hover:scale-125">
+				<img id="waifuIcon" src="./assets/wa1.jpg" alt="image of waifu" class="w-30 h-28 rounded-full transition-transform  cursor-pointer hover:scale-125">
 						
 				<span class="relative inline-block text-3xl px-5 pt-5">
 					Waifu 
