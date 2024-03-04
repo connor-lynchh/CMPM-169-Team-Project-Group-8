@@ -13,6 +13,7 @@
 	<!-- <link rel="stylesheet" type="text/css" href="../css/site.css"> -->
 	<!-- <link rel="stylesheet" type="text/css" href="css/style.css"> -->
 	<link rel="stylesheet" href="./css/output.css">
+	<script src="./js/audio.js"></script>
 </head>
 <body>
 	<!-- Style this page by changing the CSS in ../css/site.css or css/experiment.css -->
@@ -25,6 +26,21 @@
 			</button>
 			<div class="">
 				<img class='w-full h-[55vh]'src="./assets/park.jpg" alt="mayo image" ">
+				<div class="absolute rounded-full px-12 p-4"> 
+					
+					<button
+						type="button"
+						id="pauseBtn"
+						class="hover:scale-110 cursor-pointer"
+					>
+					<img src="./assets/mute.png" alt="mute" class="w-14 p-2 text-white">
+					</button>
+				</div>
+			</div>
+			<audio id="bgMusic" autoplay loop>
+				<source src="./assets/outCast.ogg" type="audio/mpeg">
+				Your browser does not support the audio element.
+			</audio>
 			</div>
 		</div>
 		
