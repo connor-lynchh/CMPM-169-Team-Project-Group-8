@@ -21,5 +21,5 @@ body {
 }
 
 .waifuIcon {
-    @apply w-24 h-24 shadow-lg rounded-full transition-transform  hover:scale-125;
+    @apply w-24 h-24 shadow-lg rounded-full transition-transform  shadow-2xl hover:scale-125;
 }

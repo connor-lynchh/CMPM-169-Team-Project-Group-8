@@ -606,6 +606,18 @@ video {
   height: 55vh;
 }
 
+.h-\[55wv\] {
+  height: 55wv;
+}
+
+.h-\[55wh\] {
+  height: 55wh;
+}
+
+.h-full {
+  height: 100%;
+}
+
 .max-h-20 {
   max-height: 5rem;
 }
@@ -654,6 +666,10 @@ video {
 
 .rounded-lg {
   border-radius: 0.5rem;
+}
+
+.rounded {
+  border-radius: 0.25rem;
 }
 
 .border-b-4 {
@@ -734,6 +750,11 @@ video {
 .py-5 {
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
+}
+
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .pt-5 {
