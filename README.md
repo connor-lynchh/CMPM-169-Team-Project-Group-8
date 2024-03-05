@@ -12,4 +12,4 @@ maybe play around with simple javascript so you can check off a blog to say that
 4. 
 5. Kayle: blog 1
 6. Atal: blog 2
-7. 
+7. Nathan: Blog 5 and Blog 6
