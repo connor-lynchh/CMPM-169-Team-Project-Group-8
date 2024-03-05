@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
     //     audioElement.pause();
     //     audioElement.src = './assets/memory.ogg';
     //     audioElement.load();
-    //     audioElement.play();
+    //     audioElement.play();//
     // })
     audioElement.play();
 
