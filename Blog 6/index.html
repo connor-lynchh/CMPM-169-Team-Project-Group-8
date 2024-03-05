@@ -1,17 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<!-- This title is used for tabs and bookmarks -->
-	<title>Experiment X - Subject/Topic</title>
-
-	<!-- Use UTF character set, a good idea with any webpage -->
+	<title>Mayonaise National Park</title>
 	<meta charset="UTF-8" />
-	<!-- Set viewport so page remains consistently scaled w narrow devices -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-	<!-- Include CSS file, including a site-wide CSS and for this particular page -->
-	<!-- <link rel="stylesheet" type="text/css" href="../css/site.css"> -->
-	<!-- <link rel="stylesheet" type="text/css" href="css/style.css"> -->
 	<link rel="stylesheet" href="./css/output.css">
 	<script src="./js/audio.js"></script>
 </head>
@@ -20,9 +12,16 @@
 	<main id="content">
 		<div class=" relative">
 			<button 
-				class="mx-4 p-4 bg-gray-700 text-white rounded-lg shrink max-w-28 max-h-20 shadow absolute top-5 hover:bg-gray-800 hover:scale-110 text-lg shadow " 
+				class="mx-4 p-2 bg-gray-500 text-white rounded-full shrink max-w-28 max-h-20 shadow absolute top-6 left-2 hover:bg-gray-800 hover:scale-110 text-lg shadow " 
 				type="button" onclick="window.location.href='../index.html';"
-				>Home
+				>
+				<img src="./assets/homeIcon.png" alt="homeIcon" class="w-12">
+			</button>
+			<button 
+				class="mx-4 bg-gray-400 text-white rounded-full shrink max-w-28 max-h-20 shadow absolute top-8 left-24 hover:bg-gray-800 hover:scale-110 text-lg shadow " 
+				type="button" onclick="window.location.href='../Blog 5/index.html';"
+				>
+				<img src="./assets/arrowLeft.png" alt="arrow Left">
 			</button>
 			<div class="bg-gray-800">
 				<img id="imageDisplay" class='w-full h-[55vh]'src="./assets/nightTree.jpeg" alt="mayo image" ">
@@ -37,7 +36,7 @@
 						id="pauseBtn"
 						class="hover:scale-110 cursor-pointer"
 					>
-					<img src="./assets/mute.png" alt="mute" class="w-14 p-2 text-white">
+						<img src="./assets/mute.png" alt="mute" class="w-14 p-2 text-white">
 					</button>
 
 					<button
@@ -45,29 +44,25 @@
 						id="switchBtn"
 						class="hover:scale-110 cursor-pointer rounded-full"
 					>
-					<img src="./assets/next.png" alt="nextImg" class="w-14 p-2 text-white">
+						<img src="./assets/next.png" alt="nextImg" class="w-14 p-2 text-white">
 					</button>
 				</div>
+
 			</div>
+
 			<audio id="bgMusic" autoplay loop>
 				<source src="./assets/outCast.ogg" type="audio/mpeg">
 				Your browser does not support the audio element.
 			</audio>
-			</div>
+			
 		</div>
 		
 		<section class="bg-gray-800 text-white p-8">
 			
 			<div class="flex justify-center">
-				
-				<!-- <img src="./assets/wa1.jpg" alt="image of waifu" class="w-30 h-28 rounded-full transition-transform  hover:scale-125"> -->
-						
-				<!-- <span class="relative inline-block text-3xl px-5 pt-5">
-					Waifu 
-				</>  -->
 				<h1 class="text-3xl "> 
-					The Unknown Creature Lurking in the Mayonaise National Park</h1>
-				
+					The Unknown Creature Lurking in the Mayonaise National Park
+				</h1>
 			</div>
 			
 			<div>
@@ -97,7 +92,8 @@
 					 It was neither wolf nor bear but something far more sinister, a sound that seemed to twist 
 					 the very air. I told myself it was just the wind playing tricks, a feeble attempt to calm
 					  the growing unease within me. Yet, as darkness enveloped the forest, the howling grew ominously
-					   closer, a harbinger of something malevolent drawing near.</p>
+					   closer, a harbinger of something malevolent drawing near.
+				</p>
 			</div>
 
 			<div class="pt-5">
@@ -116,7 +112,8 @@
 					reeking of decay, eyes that gleamed with a malevolent intelligence, and a stench so overpowering
 					 it seemed to suffocate the very air. Its size was immense, its shape an unholy amalgamation of bear
 					  and man, yet neither. The sound it made—a guttural, mocking imitation of human speech—chilled me to 
-					  the core, making me question my sanity. Was this creature real, or had the isolation driven me to madness?</p>
+					  the core, making me question my sanity. Was this creature real, or had the isolation driven me to madness?
+				</p>
 			</div>
 
 			<div class="pt-5">
@@ -154,8 +151,9 @@
 			<div>
 				<h2 class="text-3xl font-bold text-center pt-5 px-5">Comment Section</h2>
 			</div>
-			<!-- <div class="my-2 bg-gray-700 h-0.5 w-full mb-5"></div> -->
+			
 			<div class="my-2 bg-white h-0.5 w-full"></div>
+
 			<div class="px-14 space-y-4 relative">
 					
 				<div class="bg-gray-600 p-4 mt-6 rounded-lg flex relative items-center">
@@ -163,13 +161,15 @@
 					<p class="px-8 ">ForestWanderer99: This story gave me chills! I've always felt like there's more to our national parks than we know.
 						 Maybe they're home to creatures we've yet to understand.
 						 Your encounter in Mayonaise National Park makes me think twice about camping alone. Thanks for sharing, 
-						 but I won't be sleeping tonight!</p>
+						 but I won't be sleeping tonight!
+					</p>
 				</div>
 				<div class="bg-gray-600 p-4 rounded-lg flex relative items-center">
 					<img  src="./assets/wa4.png" alt="image of waifu" class=" waifuIcon">
 					<p class="px-8">NatureLover72: Wow, what a horrifying experience! I'm glad you made it out safely. 
 						It's a reminder that nature holds many mysteries and potentially dangerous creatures. 
-						Maybe some places are meant to be left alone, for our safety and the preservation of whatever lives there.</p>
+						Maybe some places are meant to be left alone, for our safety and the preservation of whatever lives there.
+					</p>
 				</div>
 				<div class="bg-gray-600 p-4 rounded-lg flex relative items-center">
 					<img  src="./assets/wa3.png" alt="image of waifu" class=" waifuIcon">
@@ -181,17 +181,17 @@
 				<div class="bg-gray-600 p-4 rounded-lg flex relative items-center">
 					<img  src="./assets/wa5.png" alt="image of waifu" class=" waifuIcon">
 					<p class="px-8">CryptidHunterX: Incredible tale! I've been researching cryptids for years, and your description matches several known encounters. The black fur, the 
-						smell, and the odd vocalizations are classic signs. You might have met one of the forest's guardians. I'd love to explore Mayonaise National Park myself one day.</p>
+						smell, and the odd vocalizations are classic signs. You might have met one of the forest's guardians. I'd love to explore Mayonaise National Park myself one day.
+					</p>
 				</div>
 				<div class="bg-gray-600 p-4 rounded-lg flex relative items-center">
 					<img  src="./assets/wa6.png" alt="image of waifu" class="waifuIcon">
 					<p class="px-8">SkepticalMind: Fascinating story, but I'm inclined to think there's a logical explanation. Perhaps it was a bear or a large wolf, and fear distorted
-						 your perception. The wilderness can play tricks on your mind, especially when you're isolated. Still, it's an intriguing tale, and I enjoyed reading it.</p>
+						 your perception. The wilderness can play tricks on your mind, especially when you're isolated. Still, it's an intriguing tale, and I enjoyed reading it.
+					</p>
 				</div>
-				
-			</div>
 
-			
+			</div>
 		</section>
 	</main>
 </body>
