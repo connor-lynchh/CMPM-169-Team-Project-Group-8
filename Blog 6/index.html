@@ -25,12 +25,12 @@
 				>Home
 			</button>
 			<div class="bg-gray-800">
-				<img class='w-full h-[55vh]'src="./assets/nightTree.jpeg" alt="mayo image" ">
+				<img id="imageDisplay" class='w-full h-[55vh]'src="./assets/nightTree.jpeg" alt="mayo image" ">
 				<!-- <video class="h-[100vh]" style="width:100vw;" src="./assets/starySky.mp4" autoplay loop muted> -->
 					<!-- <source src="./assets/starySky.mp4" type="video/mp4"> -->
 					<!-- Your browser does not support the video tag. -->
-				<!-- </video> -->
-				<div class="absolute rounded-full px-12 p-4"> 
+				<!-- </video> g-->
+				<div class="absolute rounded-full  px-6 p-4">
 					
 					<button
 						type="button"
@@ -38,6 +38,14 @@
 						class="hover:scale-110 cursor-pointer"
 					>
 					<img src="./assets/mute.png" alt="mute" class="w-14 p-2 text-white">
+					</button>
+
+					<button
+						type="button"
+						id="switchBtn"
+						class="hover:scale-110 cursor-pointer rounded-full"
+					>
+					<img src="./assets/next.png" alt="nextImg" class="w-14 p-2 text-white">
 					</button>
 				</div>
 			</div>
@@ -63,7 +71,7 @@
 			</div>
 			
 			<div>
-				<h2 class="text-2xl px-5">Arrival</h2>
+				<h2 class="text-2xl px-5 py-2">Arrival</h2>
 			</div>
 			<div class="my-2 bg-white h-0.5 w-full"></div>
 			
@@ -148,31 +156,37 @@
 			</div>
 			<!-- <div class="my-2 bg-gray-700 h-0.5 w-full mb-5"></div> -->
 			<div class="my-2 bg-white h-0.5 w-full"></div>
-			<div class="px-14 space-y-4">
-				<div class="bg-gray-600 p-4 mt-6 rounded-lg">
-					<p>ForestWanderer99: "This story gave me chills! I've always felt like there's more to our national parks than we know.
+			<div class="px-14 space-y-4 relative">
+					
+				<div class="bg-gray-600 p-4 mt-6 rounded-lg flex relative items-center">
+					<img src="./assets/wa2.png" alt="image of waifu" class="waifuIcon">
+					<p class="px-8 ">ForestWanderer99: This story gave me chills! I've always felt like there's more to our national parks than we know.
 						 Maybe they're home to creatures we've yet to understand.
 						 Your encounter in Mayonaise National Park makes me think twice about camping alone. Thanks for sharing, 
-						 but I won't be sleeping tonight!"</p>
+						 but I won't be sleeping tonight!</p>
 				</div>
-				<div class="bg-gray-600 p-4 rounded-lg">
-					<p>NatureLover72: "Wow, what a horrifying experience! I'm glad you made it out safely. 
+				<div class="bg-gray-600 p-4 rounded-lg flex relative items-center">
+					<img  src="./assets/wa4.png" alt="image of waifu" class=" waifuIcon">
+					<p class="px-8">NatureLover72: Wow, what a horrifying experience! I'm glad you made it out safely. 
 						It's a reminder that nature holds many mysteries and potentially dangerous creatures. 
-						Maybe some places are meant to be left alone, for our safety and the preservation of whatever lives there."</p>
+						Maybe some places are meant to be left alone, for our safety and the preservation of whatever lives there.</p>
 				</div>
-				<div class="bg-gray-600 p-4 rounded-lg">
-					<p>ThrillSeeker88: "This is why I love the wilderness—its unpredictability and the thrill of the unknown.
+				<div class="bg-gray-600 p-4 rounded-lg flex relative items-center">
+					<img  src="./assets/wa3.png" alt="image of waifu" class=" waifuIcon">
+					<p class="px-8">ThrillSeeker88: This is why I love the wilderness—its unpredictability and the thrill of the unknown.
 						 Your encounter, while terrifying, sounds like a once-in-a-lifetime experience.
-						  It's these stories that make me want to pack my bags and head out into the unknown of Mayonaise National Park!"
+						  It's these stories that make me want to pack my bags and head out into the unknown of Mayonaise National Park!
 					</p>
 				</div>
-				<div class="bg-gray-600 p-4 rounded-lg">
-					<p>CryptidHunterX: "Incredible tale! I've been researching cryptids for years, and your description matches several known encounters. The black fur, the 
-						smell, and the odd vocalizations are classic signs. You might have met one of the forest's guardians. I'd love to explore Mayonaise National Park myself one day."</p>
+				<div class="bg-gray-600 p-4 rounded-lg flex relative items-center">
+					<img  src="./assets/wa5.png" alt="image of waifu" class=" waifuIcon">
+					<p class="px-8">CryptidHunterX: Incredible tale! I've been researching cryptids for years, and your description matches several known encounters. The black fur, the 
+						smell, and the odd vocalizations are classic signs. You might have met one of the forest's guardians. I'd love to explore Mayonaise National Park myself one day.</p>
 				</div>
-				<div class="bg-gray-600 p-4 rounded-lg">
-					<p>SkepticalMind: "Fascinating story, but I'm inclined to think there's a logical explanation. Perhaps it was a bear or a large wolf, and fear distorted
-						 your perception. The wilderness can play tricks on your mind, especially when you're isolated. Still, it's an intriguing tale, and I enjoyed reading it."</p>
+				<div class="bg-gray-600 p-4 rounded-lg flex relative items-center">
+					<img  src="./assets/wa6.png" alt="image of waifu" class="waifuIcon">
+					<p class="px-8">SkepticalMind: Fascinating story, but I'm inclined to think there's a logical explanation. Perhaps it was a bear or a large wolf, and fear distorted
+						 your perception. The wilderness can play tricks on your mind, especially when you're isolated. Still, it's an intriguing tale, and I enjoyed reading it.</p>
 				</div>
 				
 			</div>

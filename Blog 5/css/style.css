@@ -19,3 +19,7 @@ body {
     width: 100%;
     height: 600px;
 }
+
+.waifuIcon {
+    @apply w-24 h-24 shadow-lg rounded-full transition-transform  shadow-2xl hover:scale-125;
+}
