@@ -28,7 +28,8 @@ document.addEventListener('DOMContentLoaded', function() {
     //     audioElement.load();
     //     audioElement.play();
     // })
-
+    audioElement.play();
+    
     pauseBtn.addEventListener('click', function(){
         if(!audioElement.paused){
             audioElement.pause();
