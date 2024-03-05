@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var currentIndex = 0;
 
     switchBtn.addEventListener('click', function(){
-        //cycle through array when click
+        //cycle through array when click, very clever way
         currentIndex = (currentIndex + 1) % images.length;
         imageDisplay.src = images[currentIndex];
     });
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
     //     audioElement.play();
     // })
     audioElement.play();
-    
+
     pauseBtn.addEventListener('click', function(){
         if(!audioElement.paused){
             audioElement.pause();
