@@ -37,6 +37,19 @@ document.addEventListener('DOMContentLoaded', function() {
             audioElement.play();
         }
     });
+    //circumvent the broswer mute policy
+    function playAudioOnMouseMove(){
+        if(audioElement.paused){
+            audioElement.play()
+            .then(() => { })
+            .catch(error => {
+                console.error("Audio Playback failed:", error);
+            });
+            document.removeEventListener('mousemove', playAudioOnMouseMove);
+        }
+    }
+
+    document.addEventListener('mousemove', playAudioOnMouseMove);
 
     
 
