@@ -28,6 +28,8 @@ document.addEventListener('DOMContentLoaded', function() {
         audioElement.load();
         audioElement.play();
     });
+    
+    audioElement.load();
     audioElement.play();
 
     pauseBtn.addEventListener('click', function(){
