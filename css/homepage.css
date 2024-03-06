@@ -15,12 +15,34 @@ td{
   border: 1px solid black;
 }
 
-/* Flag for review buttons */
-.flag-for-review{
-  background-color: yellow;
+.reviewButton{
+  padding: 3px;
+  border: 1px solid #000000;
+  background: yellow; 
 }
+.reviewButton:active{
+  background: rgb(0, 117, 18);
+}
+.reviewButton:focus{
+  background: rgb(0, 159, 24);
+}
+
+.readButton{
+  padding: 3px;
+  border: 1px solid #000000;
+  background: rgb(235, 235, 235); 
+}
+.readButton:active{
+  background: rgb(72, 72, 72);
+}
+.readButton:focus{
+  background: rgb(160, 160, 160);
+}
+
+/*
 .H1toH5 input { display: none; }
 .H1toH5 .reviewButton { padding: 3px; border: 1px solid #000000; background: yellow; }
 .H1toH5 input:checked + .reviewButton { background: rgb(48, 255, 30); }
-.H1toH5 .readButton { padding: 3px; border: 1px solid #000000; background: rgb(255, 255, 255); }
+.H1toH5 .readButton { padding: 3px; border: 1px solid #000000; background: rgb(235, 235, 235); }
 .H1toH5 input:checked + .readButton { background: rgb(160, 160, 160); }
+*/

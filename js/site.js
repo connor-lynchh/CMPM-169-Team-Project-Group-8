@@ -1,25 +1,39 @@
 // Constants
 
 // Functions
+function rememberColor(){
 
-// this is an example function and this comment tells what it doees and what parameters are passed to it.
-function myFunction(param1, param2) {
-  // some code here
-  // return results;
 }
 
+
+function reviewClick(){
+  console.log("review");
+  /*
+  if (localStorage.clickcount) {
+    localStorage.clickcount = Number(localStorage.clickcount) + 1; //needs to be Number() otherwise it is a string
+  } else {
+    localStorage.clickcount = 0;
+  }
+  console.log(localStorage.clickcount);
+  */
+}
+
+function readClick(){
+  console.log("read");
+  /*
+  if (localStorage.clickcount) {
+    localStorage.clickcount = Number(localStorage.clickcount) + 1;
+  } else {
+    localStorage.clickcount = 0;
+  }
+  console.log(localStorage.clickcount);
+  */
+}
+
+
 function main() {
-  console.log("Main function started.");
+  console.log("site.js working");
   // the code that makes everything happen
-  var elems = document.getElementsByClassName("flag-for-review");
-  for (var i = 0; i < elems.length; i++) {
-    elems[i].onclick = function() {
-      var color = window.getComputedStyle(this, null)
-                  .getPropertyValue("background-color");
-      this.style.backgroundColor = color === "rgb(255, 255, 0)" 
-                                  ? "rgb(255, 165, 0)" : "rgb(255, 255, 0)";
-    };
-  };
 }
 
 // let's get this party started
