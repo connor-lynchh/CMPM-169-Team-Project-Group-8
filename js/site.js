@@ -42,6 +42,26 @@ function loadLocalStorage(){
     const btn = document.getElementById("button1");
     btn.style.backgroundColor = "#009F18";
   }
+  if(localStorage.getItem("button2")){
+    const btn = document.getElementById("button2");
+    btn.style.backgroundColor = "#009F18";
+  }
+  if(localStorage.getItem("button3")){
+    const btn = document.getElementById("button3");
+    btn.style.backgroundColor = "#009F18";
+  }
+  if(localStorage.getItem("button4")){
+    const btn = document.getElementById("button4");
+    btn.style.backgroundColor = "#009F18";
+  }
+  if(localStorage.getItem("button5")){
+    const btn = document.getElementById("button5");
+    btn.style.backgroundColor = "#009F18";
+  }
+  if(localStorage.getItem("button6")){
+    const btn = document.getElementById("button6");
+    btn.style.backgroundColor = "#009F18";
+  }
 }
 
 function main() { //happens before any html object is created
