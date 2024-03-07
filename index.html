@@ -18,12 +18,15 @@
 
 <script>
 	window.onload = function() {
-  // Check if the user is already logged in
-  if(sessionStorage.getItem("loggedIn") === "true") {
-    document.getElementById('loginForm').style.display = 'none'; // Hide login form
-    document.getElementById('content').style.display = 'block'; // Show main content
-  }
-};
+		// Check if the user is already logged in
+		if(sessionStorage.getItem("loggedIn") === "true") {
+			document.getElementById('loginForm').style.display = 'none'; // Hide login form
+			document.getElementById('content').style.display = 'block'; // Show main content
+		}
+
+		//load anything in local storage
+		loadLocalStorage();
+	};
 
 	function login(event) { 
 	  event.preventDefault(); // Prevent form from submitting and refreshing the page

@@ -28,7 +28,8 @@ function readClick(button){
   */
 }
 
-/* btn must be this.id because it will remember the id of the button clicked */
+// btn must be this.id because it will remember the id of the button clicked
+// on button click save the button's ID to local storage
 function buttonClick(btnID, color){
   localStorage.setItem(btnID, "true");
   const btn = document.getElementById(btnID);
@@ -43,11 +44,9 @@ function loadLocalStorage(){
   }
 }
 
-
-function main() {
+function main() { //happens before any html object is created
   console.log("site.js working");
-  // localStorage.clear();
-  loadLocalStorage();
+  //localStorage.clear();
 }
 
 // let's get this party started
