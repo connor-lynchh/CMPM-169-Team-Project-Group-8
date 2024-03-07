@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <!-- This title is used for tabs and bookmarks -->
     <title>The Mystery of the S.S Eternity</title>
@@ -9,49 +10,97 @@
     <!-- Set viewport so page remains consistently scaled w narrow devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Include CSS file, including a site-wide CSS and for this particular page -->
-    <link rel="stylesheet" type="text/css" href="../css/site.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-
-  
+    <!-- Include Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 
     <!-- Link to javascript files - DEFER waits until all elements are rendered -->
     <!-- Use me for a JavaScript OOP Project -->
-    <script type="text/javascript" src="./js/project.js" DEFER></script>
+    <script type="text/javascript" src="./js/project.js" defer></script>
     <!-- Use me for a p5.js project -->
-    <script type="text/javascript" src="./js/sketch.js" DEFER></script>
+    <script type="text/javascript" src="./js/sketch.js" defer></script>
 </head>
-<body>
+
+<body class="bg-gray-100">
     <!-- Style this page by changing the CSS in ../css/site.css or css/experiment.css -->
-    <main id="content">
-        <button type="button" onclick="window.location.href='../index.html';">Back to Homepage</button>
-        <section>
-            <h1> The Mystery of the S.S Eternity</h1>
-            <div class="reddit-post">
-                <div class="reddit-post-header">
-                    <div class="reddit-post-title">
-                        <h2>Paranormal Movement on Cruise Ship</h2>
-                    </div>
-                    <div class="reddit-post-meta">
-                        <span>posted by <a href="#">CrewmateFishy12</a></span>
-                        <span>1 hour ago</span>
+    <main id="content" class="max-w-4xl mx-auto p-8">
+        <button type="button" onclick="window.location.href='../index.html';"
+            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Back to
+            Homepage</button>
+        <section class="mt-8">
+            <h1 class="text-3xl font-bold">The Mystery of the S.S Eternity</h1>
+            <div class="reddit-post bg-white shadow-md rounded-lg p-8 mt-4">
+                <div class="reddit-post-header flex items-center mb-4">
+                    <!-- Profile Picture for CrewmateFishy12 -->
+                    <img src="fish.png" alt="Profile Picture" class="w-12 h-12 rounded-full">
+                    <div class="ml-4">
+                        <div class="reddit-post-title">
+                            <h2 class="text-xl font-semibold">Paranormal Movement on Cruise Ship</h2>
+                        </div>
+                        <div class="reddit-post-meta flex items-center text-sm text-gray-600">
+                            <span class="mr-2">posted by <a href="#" class="text-blue-500">CrewmateFishy12</a></span>
+                            <span>1 hour ago</span>
+                        </div>
                     </div>
                 </div>
-                <div class="reddit-post-content">
+                <div class="reddit-post-content mt-4">
                     <!-- Your blog content goes here -->
-                    <p>As a member of the crew aboard the S.S. Eternity, my days were filled with routine tasks and duties, from ensuring the comfort and safety of our passengers to maintaining the condition of the ship. I loved my job until I started noticing peculiar things happening on the ship.</p>
-                    <p>At first, it was nothing more than a faint whisper echoing through the empty corridors or a swift shadow darting out of sight. I dismissed these occurrences as the product of my own imagination, I figured I was hallucinating from being tired and being out at sea for such long hours.</p>
-                    <p>But as the days turned into weeks and weeks into months, the sightings became impossible to ignore. I would catch glimpses of ghostly figures roaming the decks, their ethereal forms shimmering in the dim moonlight. They seemed to move with purpose, yet their faces remained obscured to me, and I still have no idea what their intentions are.</p>
-                    <p>The worst part about this whole thing is that I think I'm the only one on board who can see these beings. I'm thankful that they haven't done anything other than roam the halls. But at our next destination, I'm getting off this ship and resigning from my position.</p>
-					<img class="me-photo" src="boat.png">
-				</div>
-                <div class="reddit-post-footer">
-                    <a href="#">12 Comments</a>
-                    <a href="#">Share</a>
-					
+                    <p class="mb-4">As a member of the crew aboard the S.S. Eternity, my days were filled with
+                        routine tasks and duties, from ensuring the comfort and safety of our passengers to maintaining
+                        the condition of the ship. I loved my job until I started noticing peculiar things happening
+                        on the ship.</p>
+                    <p class="mb-4">At first, it was nothing more than a faint whisper echoing through the empty
+                        corridors or a swift shadow darting out of sight. I dismissed these occurrences as the product
+                        of my own imagination, I figured I was hallucinating from being tired and being out at sea for
+                        such long hours.</p>
+                    <p class="mb-4">But as the days turned into weeks and weeks into months, the sightings became
+                        impossible to ignore. I would catch glimpses of ghostly figures roaming the decks, their
+                        ethereal forms shimmering in the dim moonlight. They seemed to move with purpose, yet their
+                        faces remained obscured to me, and I still have no idea what their intentions are.</p>
+                    <p class="mb-4">The worst part about this whole thing is that I think I'm the only one on board
+                        who can see these beings. I'm thankful that they haven't done anything other than roam the
+                        halls. But at our next destination, I'm getting off this ship and resigning from my
+                        position.</p>
+                    <!-- Image gallery -->
+                    <div class="grid grid-cols-2 gap-4">
+                        <img class="w-full" src="boat.png" alt="Ship">
+                        <img class="w-full" src="img2.png" alt="Image 2">
+                        
+                    </div>
                 </div>
+                <div class="reddit-post-footer flex justify-between items-center mt-4">
+                    <a href="#" class="text-blue-500">2 Comments</a>
+                    <a href="#" class="text-blue-500">Share</a>
+                </div>
+            </div>
+            <!-- Comment Section -->
+            <div class="mt-8">
+                <h2 class="text-xl font-bold mb-4">Comments</h2>
+                <div class="bg-white shadow-md rounded-lg p-4">
+                    <!-- Sample comment -->
+                    <div class="flex items-start mb-4">
+                        <img src="squid.png" alt="Profile Picture" class="w-12 h-12 rounded-full">
+                        <div class="ml-4">
+                            <h3 class="font-semibold">HistoryBuff123</h3>
+                            <p class="text-sm text-gray-600">1 hour ago</p>
+                            <p class="text-gray-800 mb-2">I think you're just actually crazy, bro.</p>
+                            <!-- Reply to the previous comment -->
+                            <div class="bg-gray-100 shadow-md rounded-lg p-4 ml-12">
+                                <div class="flex items-start">
+                                    <img src="img.png" alt="Profile Picture" class="w-10 h-10 rounded-full">
+                                    <div class="ml-4">
+                                        <h3 class="font-semibold">CosmicCascade8</h3>
+                                        <p class="text-sm text-gray-600">Just now</p>
+                                        <p class="text-gray-800">Who knows honestly, I've heard a similar story before.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- You can add more comments here -->
             </div>
         </section>
     </main>
 </body>
+
 </html>
