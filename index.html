@@ -97,9 +97,10 @@
 								</label>
 							</div>
 							-->
-							
-							<button onclick="reviewClick()" class="reviewButton">Flag for review</button>
-							<button onclick="readClick()" class="readButton">Mark as Read</button>
+							<!-- <button onclick="buttonClicked('#009F18')" id="btn1" class="reviewButton">Flag for review</button> -->
+							<button onclick="buttonClick(this.id, '#009F18')" id="button1" class="reviewButton">Flag for review</button>
+							<button onclick="readClick(this)" class="readButton">Mark as Read</button>
+							<!-- Brendan: read buttons dont need to use buttonClick() for now and could be removed since we might make changing stories and I don't understand localStorage -->
 						</td>
 					</tr>
 					<tr>
@@ -107,10 +108,10 @@
 						<td width="20%">
 							<div class="H1toH5">
 								<label>
-									<input type="checkbox" /> <span class="reviewButton">Flag for review</span>
+									<input type="checkbox"> <span class="reviewButton">Flag for review</span>
 								</label>
 								<label>
-									<input type="checkbox" /> <span class="readButton">Mark as read</span>
+									<input type="checkbox"> <span class="readButton">Mark as read</span>
 								</label>
 							</div>
 						</td>

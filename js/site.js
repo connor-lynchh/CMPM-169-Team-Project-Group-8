@@ -1,13 +1,10 @@
 // Constants
 
 // Functions
-function rememberColor(){
-
-}
-
-
-function reviewClick(){
+//Brendan: reviewClick() and readClick() are not used for right now because I want to see if I can just use 1 function
+function reviewClick(button){
   console.log("review");
+  button.style.backgroundColor = "#009F18";
   /*
   if (localStorage.clickcount) {
     localStorage.clickcount = Number(localStorage.clickcount) + 1; //needs to be Number() otherwise it is a string
@@ -18,8 +15,9 @@ function reviewClick(){
   */
 }
 
-function readClick(){
+function readClick(button){
   console.log("read");
+  button.style.backgroundColor = "#A0A0A0";
   /*
   if (localStorage.clickcount) {
     localStorage.clickcount = Number(localStorage.clickcount) + 1;
@@ -30,10 +28,26 @@ function readClick(){
   */
 }
 
+/* btn must be this.id because it will remember the id of the button clicked */
+function buttonClick(btnID, color){
+  localStorage.setItem(btnID, "true");
+  const btn = document.getElementById(btnID);
+  btn.style.backgroundColor = color;
+}
+
+function loadLocalStorage(){
+  console.log("begin local storage")
+  if(localStorage.getItem("button1")){
+    const btn = document.getElementById("button1");
+    btn.style.backgroundColor = "#009F18";
+  }
+}
+
 
 function main() {
   console.log("site.js working");
-  // the code that makes everything happen
+  // localStorage.clear();
+  loadLocalStorage();
 }
 
 // let's get this party started
