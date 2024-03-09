@@ -31,6 +31,7 @@ function readClick(button){
 // btn must be this.id because it will remember the id of the button clicked
 // on button click save the button's ID to local storage
 function buttonClick(btnID, color){
+  console.log("e")
   localStorage.setItem(btnID, "true");
   const btn = document.getElementById(btnID);
   btn.style.backgroundColor = color;
@@ -60,6 +61,18 @@ function loadLocalStorage(){
   }
   if(localStorage.getItem("button6")){
     const btn = document.getElementById("button6");
+    btn.style.backgroundColor = "#009F18";
+  }
+  if(localStorage.getItem("button7")){
+    const btn = document.getElementById("button7");
+    btn.style.backgroundColor = "#009F18";
+  }
+  if(localStorage.getItem("button8")){
+    const btn = document.getElementById("button8");
+    btn.style.backgroundColor = "#009F18";
+  }
+  if(localStorage.getItem("button9")){
+    const btn = document.getElementById("button9");
     btn.style.backgroundColor = "#009F18";
   }
 }
