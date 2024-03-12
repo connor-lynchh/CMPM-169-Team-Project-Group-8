@@ -12,7 +12,16 @@
 	<!-- Include CSS file, including a site-wide CSS and for this particular page -->
 	<!--    <link rel="stylesheet" type="text/css" href="../css/site.css">    -->
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="js/project.js"></script>
 </head>
+
+<script>
+	window.onload = function() {
+		//load anything in local storage
+		loadLocalStorage();
+	};
+</script>
+
 <body>
 	<!-- Brendan's stuff. You don't need to copy this format -->
 	<main id="content">
@@ -51,6 +60,12 @@ more stuff
 
 				</pre>
 			</div>
+		</section>
+
+		<section id="SPECIAL"> <!-- This text will be hidden until the review button is clicked -->
+			<p>
+				SHOW THIS TEXT IF THE REVIEW BUTTON WAS CLICKED
+			</p>
 		</section>
 	</main>
 </body>

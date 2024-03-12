@@ -13,7 +13,6 @@ function buttonClick(btnID, color){
     const row2 = document.getElementById("row" + btnID[6] + "a");
     row2.style.backgroundColor = "#E5E4E2";
   }
-  
 }
 
 function loadLocalStorage(){
