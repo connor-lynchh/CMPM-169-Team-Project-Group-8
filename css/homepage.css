@@ -1,12 +1,11 @@
-
-.cat-photo {
-  margin: 10px;
-  max-width: 500px;
-}
-
 .blogs-table{
   background-color: rgb(225, 225, 225);
   border: 1px solid grey;
+}
+
+.minorReport{
+  color: grey;
+  font-size: 90%;
 }
 
 /* Affects all table cells */
