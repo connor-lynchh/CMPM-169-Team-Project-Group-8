@@ -176,7 +176,7 @@ let specialReportList = [  //the time or report dependent ones
 
 function ChangeMinorReports(){
   let x=document.getElementsByClassName("minorReport");  // Find the elements
-  let someList = [];
+  let minorList = []; let specialList = [];
   for(var i = 0; i < x.length; i++){
     //get item from reportList using random number
     
@@ -184,23 +184,27 @@ function ChangeMinorReports(){
     let whichType = Math.floor((Math.random() * (2 - 0))); //0-1
     if(whichType == 0){
       let randomNum = Math.floor(Math.random() * (reportList.length - 0));
+      while(someList.includes(randomNum)){      //keep finding new item if it already exists
+        randomNum = Math.floor((Math.random() * (max - min) + min));
+      }
+      let newReport = reportList[randomNum];
+      x[i].innerText = newReport;
+      someList.push(randomNum);
     }
     else{
       let randomNum = Math.floor(Math.random() * (reportList.length - 0));
+      //SpecialMinorReportCheck()
+      while(someList.includes(randomNum)){      //keep finding new item if it already exists
+        randomNum = Math.floor((Math.random() * (max - min) + min));
+      }
+      let newReport = reportList[randomNum];
+      x[i].innerText = newReport;
+      someList.push(randomNum);
     }
-    //SpecialMinorReportCheck()
-    let newReport = reportList[randomNum];
-    //keep finding new item if it already exists
-    while(someList.includes(randomNum)){
-      randomNum = Math.floor((Math.random() * (max - min) + min));
-      newReport = reportList[randomNum];
-    }
-    x[i].innerText = newReport;
-    someList.push(randomNum);
   }
 }
 
-function SpecialMinorReportCheck(num){
+function SpecialMinorReportCheck(num){ //checking if special report is possible
   switch(num){
     case 0:
       break;
