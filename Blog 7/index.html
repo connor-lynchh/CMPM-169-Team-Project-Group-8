@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Reviews Daily</title>
+    <style>
+        body {
+            background-color: #c7c7c7;
+            color: #0f0f0f;
+            font-family: 'Futura', sans-serif;
+            margin: 0;
+            padding: 0;
+            font-size: 16px;
+        }
+        main {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+        }
+        button {
+            background-color: #53535353;
+            color: #000000;
+            border: 1px;
+            padding: 5px 10px;
+            margin: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #555;
+        }
+        .minor-section h2 {
+            color: #000000;
+        }
+        .minor-section p {
+            text-indent: 20px;
+            margin-bottom: 15px;
+        }
+        .comment-section h2 {
+            color: #000000;
+        }
+        .comment-section p {
+            text-indent: 20px;
+            margin-bottom: 15px;
+        }
+        .comment-section {
+            margin-bottom: 20px;
+            border-bottom: 1px dashed #555;
+            padding-bottom: 10px;
+        }
+        .minor-section {
+            margin-bottom: 20px;
+            border-bottom: 1px dashed #555;
+            padding-bottom: 10px;
+        }
+    </style>
+<script>
+    window.onload = function() {
+         document.body.addEventListener('mousedown', playClickSound);
+        };
+        function playClickSound() {
+        var audio = new Audio('click.mp3');
+        audio.play();
+    }
+  
+	function playAudio() {
+	  audio.play()
+		.then(() => {
+		  console.log("Audio playback started successfully");
+		})
+		.catch((error) => {
+		  console.error("Playback failed:", error);
+		});
+	}
+  
+	function toggleMute() {
+	  audio.muted = !audio.muted;
+	}
+	
+	// Listen for a user interaction event to play audio
+	document.addEventListener('click', playAudio, { once: true });
+  </script>
+  
+</head>
+<body>
+    <main id="content">
+         <h1>Game Reviews Daily</h1>
+        <button onclick="window.location.href='../index.html';">Back to Homepage</button>
+       
+        <section class="minor-section">
+            <h2>Review: Viritual</h2>
+            <p>Today’s review will be about a niche mobile game I was recommended by a friend. It’s called Viritual, and it’s honestly pretty badass. It’s an AR horror game where you have to track down rifts in reality, which demons can speak through to give you instructions for how to perform a ritual. I almost think it uses some kind of hypnosis or neuro-linguistic programming or something, because it’s super immersive— like, with some of the demon voices I get this chill down the back of my neck while they’re talking, and it really feels like there’s something standing right behind me. Last night I totally zoned out while playing and ended up walking twice as far as I meant to without even realizing. Whatever trick they’re using with the audio, they’re doing a great job.</p>
+            
+            <p>My only critique about the game would be that it’s got some sort of setting that makes it run in the background all the time, and I can’t figure out how to turn it off. They could probably use some improvements to the UI in general, actually, it’s a bit hard to navigate. Anyway, every so often a clue will pop up while I have the app closed and I’m doing other things. It’s fun sometimes, but I’d like it if I could turn that feature off, especially when I’m at work. Other than that, though, I really don’t have any complaints.</p>
+            
+            <p>Apparently, there’s a big event coming up in the game, so if you haven’t downloaded the app yet, you should do so now! I heard there’s been an issue where some people have trouble finding it in the app store— it’s not always showing up in search results for some reason. Anyway, if you’re trying to download it and can’t find it in the app store, DM me and I’ll send you a referral link. I don’t want to post it here because I’ve gotten some rude feedback about including referral links in my reviews.</p>
+            
+            <p>Anyway, hope y’all are having a great day, and I look forward to seeing you in-game!</p>
+        </section>
+        <section class="comment-section">
+            <h3>Comments</h3>
+            <p>Guest: Umm... have you seen the warnings people have been posting about this game? Apparently it like, totally breaks your phone.</p>
+            
+            <p>demonnick666: Nah, man, it's totally haunted.</p>
+            
+            </section>
+        <div class="author-profile">
+            <h3>About the Author</h3>
+            <p>Name: Jason C.</p>
+            <p>Jason is one of the founders of this blog, Game Reviews Daily. As a child, he loved playing all sorts of games, but it wasn't until he was in college that he realized he could write about games, too. He and a few friends put together this blog, and they're all thrilled with how successful it's been so far.</p>
+        </div>
+    </main>
+</body>
+</html>
