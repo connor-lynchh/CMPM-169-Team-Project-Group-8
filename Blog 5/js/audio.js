@@ -27,6 +27,15 @@ document.addEventListener('DOMContentLoaded', function() {
         imageDisplay.src = images[currentIndex];
     });
 
+    // Function to play click sound
+    function playClickSound() {
+        var audio = new Audio('click.mp3');
+        audio.play();
+    }
+
+    // Attach click sound event listener to body
+    document.body.addEventListener('mousedown', playClickSound);
+    
     waifuIcon.addEventListener('click', function(){
         audioElement.pause();
         audioElement.src = '../Blog 6/assets/audio/aStepAway.ogg';

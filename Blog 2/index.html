@@ -582,7 +582,17 @@
         
     
 <iframe scrolling="no" width="1" height="1" frameborder="0" style="background-color:transparent; overflow:hidden; position:absolute; top:0; left:0; z-index:9999;" id="ga_target"></iframe><script type="text/javascript">
-		</script>
+		
+        
+        window.onload = function() {
+         document.body.addEventListener('mousedown', playClickSound);
+        };
+        function playClickSound() {
+        var audio = new Audio('click.mp3');
+        audio.play();
+    }
+   
+        </script>
 		</body>
 		</head>
 	</html>

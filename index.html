@@ -26,6 +26,8 @@
 
 		//load anything in local storage
 		loadLocalStorage();
+		// Add event listener to play click sound on mouse click
+		document.body.addEventListener('mousedown', playClickSound);
 	};
 
 	function login(event) { 
@@ -40,6 +42,47 @@
 		alert("Please enter both username and password.");
 	  }
 	}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+	var flaggedPostsCount = 0;
+
+function buttonClick(id, color) {
+  // Get the button element
+  var button = document.getElementById(id);
+  // Change the button color based on the action
+  button.style.backgroundColor = color;
+
+  // If a post is flagged for review, increment the counter
+  if (color === '#009F18') { // Assuming green color means flagged
+	flaggedPostsCount++;
+  }
+  
+  // You can call the report generation function here or at a specific event
+  generateUserReport();
+}
+
+function generateUserReport() {
+  // Logic to generate a user report based on their actions
+  var report = "";
+  if (flaggedPostsCount === 0) {
+	report = "You haven't flagged any posts yet. Your vigilance can help shape the narrative of the supernatural!";
+  } else if (flaggedPostsCount < 5) {
+	report = "You've flagged a few posts, which helps us filter the fact from the fiction. Keep up the good work!";
+  } else {
+	report = "You're on a roll! Your diligent flagging contributes greatly to our understanding of the unexplained.";
+  }
+  // Display the report to the user
+  document.getElementById('userImpactReport').innerText = report;
+}
+=======
+	function playClickSound() {
+            var audio = new Audio('click.mp3');
+            audio.play();
+        }
+>>>>>>> 885677238bb85059fb84b799f4123c3b6899fe6a
+>>>>>>> parent of 8bd54ad (Revert "Merge branch 'master' of https://github.com/connor-lynchh/CMPM-169-Team-Project-Group-8")
 	</script>
 
 <body>
@@ -53,10 +96,10 @@
 			<input type="submit" value="Login">
 		  </div>
 		</form>
-	</div>
+	  </div>
 	  
-	<!-- After the login page -->
-	<main id="content" style="display:none;">
+	  <!-- After the login page -->
+	  <main id="content" style="display:none;">
 		<section>
 			<table width="100%" height="100%" border="5">
  				 <tbody>
@@ -74,24 +117,24 @@
       					<td width="1917" height="219"><table width="100%" height="100%" border="1">
        					<tbody>
 							<tr>
-								<td style="padding: 10px; height:209px;"><section><p>&gt;Welcome, new employee, to the EerieWatch web portal.</p>
-								<p> &gt;Here, you will find a list of reports of potential supernatural activity that have been gathered for our organization to review. While such an important task may seem intimidating at first, we have faith that you will swiftly gain the experience and understanding necessary to thrive in your new position! </p>
-								<p>&gt;Below, you will find a list of reports to investigate. At your current clearance level, further steps in the investigative process remain confidential, but you still have an important job to do! Please read the reports carefully. Some may be descriptions of legitimate supernatural occurrences, but others are likely to be fictional stories, or manifestations of the author’s superstitions. Your job is to flag any reports of legitimate occurrences for future investigation. </p>
-								<p>&gt;We trust that you will do everything in your power to excel. </p></section>
-								</td>
-							</tr>
-							<tr>
-								<td style="padding: 10px; height: 36;"> <p>Type Message...</p></td>
-							</tr>
+           					<td style="padding: 10px; height:209px;"><section><p>&gt;Welcome, new employee, to the EerieWatch web portal.</p>
+              				<p> &gt;Here, you will find a list of reports of potential supernatural activity that have been gathered for our organization to review. While such an important task may seem intimidating at first, we have faith that you will swiftly gain the experience and understanding necessary to thrive in your new position! </p>
+              				<p>&gt;Below, you will find a list of reports to investigate. At your current clearance level, further steps in the investigative process remain confidential, but you still have an important job to do! Please read the reports carefully. Some may be descriptions of legitimate supernatural occurrences, but others are likely to be fictional stories, or manifestations of the author’s superstitions. Your job is to flag any reports of legitimate occurrences for future investigation. </p>
+              				<p>&gt;We trust that you will do everything in your power to excel. </p></section>
+              				</td>
+          				</tr>
+          				<tr>
+            				<td style="height: 36;"> <p>Type Message...</p></td>
+          				</tr>
         				</tbody>
-      					</table></td>
+      					</table> </td>
    					 </tr>
 
 				<!-- BLOGS/CASES/REPORTS TABLE -->
     			<tr>
       				<td><table width="100%" class="blogs-table">
 					<tr>
-						<th style="text-align: center; padding: 20px;" colspan="2">Reports</th>
+						<th style="text-align: center; padding: 10px;" colspan="2">Reports</th>
 					</tr>
 					<tr>
 						<td style="padding: 10px" id="row1"><a href="Blog 1/index.html">The Mystery of the S.S Eternity</a><br>Paranormal Movement on Cruise Ship</td>
@@ -108,7 +151,7 @@
 						</td>
 					</tr>
 					<tr>
-						<td style="padding: 10px" id="row3"><a href="Blog 3/index.html">Empty Houses</a><br>Houses in Northern Maryland are empty but people appear when not looked at</td>
+						<td style="padding: 10px" id="row3"><a href="Blog 3/index.html">Blog 3 title</a><br>Describe the blog a little</td>
 						<td width="20%" id="row3a">
 							<button onclick="buttonClick(this.id, '#009F18')" id="review3" class="reviewButton">Flag for review</button>
 							<button onclick="buttonClick(this.id, '#A0A0A0')" id="read3" class="readButton">Mark as Read</button>
@@ -156,11 +199,16 @@
 							<button onclick="buttonClick(this.id, '#A0A0A0')" id="read9" class="readButton">Mark as Read</button>
 						</td>
 					</tr>
-					</table></td>
-    			</tr>
- 				</tbody>
-			</table>
+				</table></td>
+    		</tr>
+ 		</tbody>
+	</table>
+</body>
+
 		</section>
+		<nav id="links">
+			
+		</nav>
 	</main>
 </body>
 </html>

@@ -18,6 +18,18 @@
     <script type="text/javascript" src="./js/project.js" defer></script>
     <!-- Use me for a p5.js project -->
     <script type="text/javascript" src="./js/sketch.js" defer></script>
+
+    <script>
+        window.onload = function() {
+            loadLocalStorage();
+            document.body.addEventListener('mousedown', playClickSound);
+        };
+
+        function playClickSound() {
+            var audio = new Audio('click.mp3');
+            audio.play();
+        }
+    </script>
 </head>
 
 <body class="bg-gray-100">
@@ -38,7 +50,7 @@
                         </div>
                         <div class="reddit-post-meta flex items-center text-sm text-gray-600">
                             <span class="mr-2">posted by <a href="#" class="text-blue-500">CrewmateFishy12</a></span>
-                            <span>1 hour ago</span>
+                            <span>10 hours ago</span>
                         </div>
                     </div>
                 </div>
@@ -64,7 +76,6 @@
                     <div class="grid grid-cols-2 gap-4">
                         <img class="w-full" src="boat.png" alt="Ship">
                         <img class="w-full" src="img2.png" alt="Image 2">
-                        
                     </div>
                 </div>
                 <div class="reddit-post-footer flex justify-between items-center mt-4">
@@ -100,7 +111,27 @@
                 <!-- You can add more comments here -->
             </div>
         </section>
+
+        <!-- SPECIAL section -->
+        <section id="SPECIAL" class="hidden mt-8 bg-white shadow-md rounded-lg p-8">
+            <div class="special">
+                <div class="reddit-post-header flex items-center mb-4">
+                    <!-- Profile Picture for CrewmateFishy12 -->
+                    <img src="fish.png" alt="Profile Picture" class="w-12 h-12 rounded-full">
+                    <div class="ml-4">
+                        <h3 class="font-semibold">CrewmateFishy12 (Update)</h3>
+                        <p class="text-sm text-gray-600">1 hour ago</p>
+                    </div>
+                </div>
+                <p> After several eerie encounters aboard the S.S. Eternity, I decided to investigate further. 
+                    To my shock, I discovered that the strange occurrences were caused by a malfunctioning security system, creating ghostly illusions throughout the ship.
+                     Rest assured, there are no actual supernatural entities haunting the ship.
+                    Please enjoy my stories, and remember, reality can be stranger than fiction.
+                </p>
+            </div>
+        </section>
     </main>
 </body>
 
 </html>
+
