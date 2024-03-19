@@ -1,34 +1,18 @@
-// project.js - purpose and description here
-// Author: Your Name
-// Date:
-
-// NOTE: This is how we might start a basic JavaaScript OOP project
-
-// Constants - User-servicable parts
-// In a longer project I like to put these in a separate file
-
-// define a class
-class MyProjectClass {
-  // constructor function
-  constructor(param1, param2) {
-    // set properties using 'this' keyword
-    this.property1 = param1;
-    this.property2 = param2;
+function loadLocalStorage(){
+  console.log("local storage start")
+  const x = document.getElementById("SPECIAL"); //find a section with id: SPECIAL
+  if(x){
+      console.log("found special text");
+      if(localStorage.getItem("review1")){
+          console.log("reveal special text");
+          x.style.display = "block";
+      }
+      else{
+          console.log("review button not clicked so hide special text")
+          x.style.display = "none";
+      }
   }
-  
-  // define a method
-  myMethod() {
-    // code to run when method is called
+  else{
+      console.log("No special text found (ignore if you don't care)")
   }
 }
-
-function main() {
-  // create an instance of the class
-  let myInstance = new MyProjectClass(value1, value2);
-
-  // call a method on the instance
-  myInstance.myMethod();
-}
-
-// let's get this party started - uncomment me
-//main();

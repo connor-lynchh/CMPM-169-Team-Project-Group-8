@@ -43,6 +43,13 @@
         }
     </style>
 <script>
+    window.onload = function() {
+         document.body.addEventListener('mousedown', playClickSound);
+        };
+        function playClickSound() {
+        var audio = new Audio('click.mp3');
+        audio.play();
+    }
 	var audio = new Audio('Dark Forest.mp3');
   
 	function playAudio() {
