@@ -91,6 +91,9 @@ function generateReport(blogId, flagged) {
         reportMessage = "The studio's anomalies marked by your flag could uncover a bizarre phenomenon worth our attention.";
         break;
       // Repeat for other blog numbers
+      case '3':
+        reportMessage = "The studio's anomalies marked by your flag could uncover a bizarre phenomenon worth our attention.";
+        break;
       default:
         reportMessage = "You've flagged a report. Our team will carefully review the details for supernatural activity.";
         break;
@@ -103,6 +106,9 @@ function generateReport(blogId, flagged) {
       case '2':
         reportMessage = "Not flagging the studio's strange occurrences might be judicious, assuming they're mere quirks of the mundane.";
         break;
+        case '3':
+        reportMessage = "Not flagging the studio's strange occurrences might be judicious, assuming they're mere quirks of the mundane.";
+        break;
       // Repeat for other blog numbers
       default:
         reportMessage = "You didn't flag this post. We'll consider it a closed chapter unless more evidence surfaces.";
@@ -111,7 +117,16 @@ function generateReport(blogId, flagged) {
   }
 
   // You might want to use a more user-friendly way to display this message, like injecting it into the DOM
-  alert(reportMessage);
+  // Inject the report message into the DOM
+  document.getElementById('reportMessage').textContent = reportMessage;
+
+  // Show the report box
+  document.getElementById('reportBox').style.display = 'flex';
+}
+
+function closeReportBox() {
+  // Hide the report box
+  document.getElementById('reportBox').style.display = 'none';
 }
 
 function resetFlagsAndReads() {
