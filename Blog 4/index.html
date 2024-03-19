@@ -45,6 +45,24 @@
             padding-bottom: 10px;
         }
     </style>
+<p id="current-time"></p>
+<script>
+    function displayCurrentTime() {
+        var now = new Date();
+        var hours = now.getHours();
+        var minutes = now.getMinutes();
+        var seconds = now.getSeconds();
+        var ampm = hours >= 12 ? 'PM' : 'AM';
+        hours = hours % 12;
+        hours = hours ? hours : 12; // Handle midnight (0 hours)
+        minutes = minutes < 10 ? '0' + minutes : minutes;
+        seconds = seconds < 10 ? '0' + seconds : seconds;
+        var timeString = hours + ':' + minutes + ':' + seconds + ' ' + ampm;
+        document.getElementById('current-time').textContent = timeString;
+    }
+    displayCurrentTime();
+    setInterval(displayCurrentTime, 1000);
+</script>
 <script>
     window.onload = function() {
          document.body.addEventListener('mousedown', playClickSound);

@@ -6,8 +6,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" href="./css/output.css">
 	<script src="./js/audio.js"></script>
-	<p id="current-time"></p>
-    <script>
+</head>
+<body>
+	<main id="content">
+		<div class=" relative">
+			<p id="current-time"></p>
+    	<script>
         function displayCurrentTime() {
             var now = new Date();
             var hours = now.getHours();
@@ -24,10 +28,6 @@
         displayCurrentTime();
         setInterval(displayCurrentTime, 1000);
     </script>
-</head>
-<body>
-	<main id="content">
-		<div class=" relative">
 			<button 
 				class="mx-4 p-2 cursor-pointer bg-gray-500 text-white rounded-full shrink max-w-28 max-h-20 shadow absolute top-6 left-6 hover:bg-gray-800 hover:scale-110 text-lg shadow " 
 				type="button" onclick="window.location.href='../index.html';"
