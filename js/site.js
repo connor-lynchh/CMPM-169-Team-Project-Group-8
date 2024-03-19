@@ -34,7 +34,7 @@ function generateReport(blogId, flagged) {
    if (flagged) {
     switch(blogId) {
       case '1':
-        reportMessage = "Flagging the S.S. Eternity's report is prudent; its spectral passengers may warrant an investigation.";
+        reportMessage = "Flagging the S.S. Eternity's report is prudent; its spectral passengers may warrant an investigation. /n Hello new line here how is this working out hopefully good";
         break;
       case '2':
         reportMessage = "The studio's anomalies marked by your flag could uncover a bizarre phenomenon worth our attention.";
