@@ -148,20 +148,47 @@ let reportList = [
   "Water bottle shortage",
   "North American alligator farm found and captured",
   "Missing kids found across continent",
-  "Los Angeles residents concerned about a “purple traffic light” spotted along their morning commute",
   "Churches are outraged about popular new mobile game with “satanic influences”",
   "Surge in missing cats attributed to increase in coyote population",
   "San Francisco teens claim to have found an enormous skeleton on the beach",
+  "Suspect in murder case claims to have been possessed by a demon",
+  "Popular canned soup recalled after a new species of parasite was discovered within the soup cans",
+  "Ouija Boards sold out after new Instagram trend",
+  "New anti-aging cream linked to disorientation and strange hallucinations",
 ]
-let min = 0;
-let max = reportList.length;
+
+let specialReportList = [  //the time or report dependent ones
+  "WARNING: DO NOT LEAVE THE BUILDING. A TEMPORAL DISTORTION HAS BEEN DETECTED IN YOUR AREA", //day
+  "Doctors perplexed by occurrences of severe sunburns after only a few minutes spent outdoors", //day
+  "Los Angeles residents concerned about a “purple traffic light” spotted along their morning commute", //morning
+  "Craigslist adjusts policies to restrict sale of haunted items", //morning or afternoon
+  "City council considers enacting curfew after an increase in missing persons cases", //evening
+  "WARNING: DO NOT LEAVE THE BUILDING. AN UNIDENTIFIED SUPERNATURAL PRESENCE HAS BEEN DETECTED IN YOUR AREA", //evening
+  "Gas leak in downtown subway station causes passengers to report “descending into Hell”", //evening
+  "Trending TikTok videos claim to show “werewolf sightings”", //night
+  "Victim of mugging claims to have been “attacked by a vampire”", //night
+  "WARNING: DO NOT ANSWER YOUR DOOR. RELIABLE REPORTS INDICATE AN ACTIVE VAMPIRE IN YOUR AREA", //night
+  "Child in Maryland accidentally causes police investigation", //flag Blog 3
+  "National Park closed to the public after strange disappearances", //flagging Blog 6
+  "Critics of popular game “Viritual” claim it has damaged their phones", //read blog 7
+  "Rise in schizophrenia diagnoses linked with popular game “Viritual”", //read Blog 8
+]
 
 function ChangeMinorReports(){
   let x=document.getElementsByClassName("minorReport");  // Find the elements
   let someList = [];
   for(var i = 0; i < x.length; i++){
     //get item from reportList using random number
-    let randomNum = Math.floor((Math.random() * (max - min) + min));
+    
+    //random chance to use special report
+    let whichType = Math.floor((Math.random() * (2 - 0))); //0-1
+    if(whichType == 0){
+      let randomNum = Math.floor(Math.random() * (reportList.length - 0));
+    }
+    else{
+      let randomNum = Math.floor(Math.random() * (reportList.length - 0));
+    }
+    //SpecialMinorReportCheck()
     let newReport = reportList[randomNum];
     //keep finding new item if it already exists
     while(someList.includes(randomNum)){
@@ -170,6 +197,31 @@ function ChangeMinorReports(){
     }
     x[i].innerText = newReport;
     someList.push(randomNum);
+  }
+}
+
+function SpecialMinorReportCheck(num){
+  switch(num){
+    case 0:
+      break;
+    case 1:
+      break;
+    case 2:
+      break;
+    case 3:
+      break;
+    case 4:
+      break;
+    case 5:
+      break;
+    case 6:
+      break;
+    case 7:
+      break;
+    case 8:
+      break;
+    default:
+      return num;
   }
 }
 
