@@ -72,7 +72,7 @@ function generateReport(blogId, flagged) {
   let reportMessage = '';
 
    if (flagged) {
-    switch(blogNumber) {
+    switch(blogId) {
       case '1':
         reportMessage = "Flagging the S.S. Eternity's report is prudent; its spectral passengers may warrant an investigation.";
         break;
@@ -85,7 +85,7 @@ function generateReport(blogId, flagged) {
         break;
     }
   } else {
-    switch(blogNumber) {
+    switch(blogId) { //never shows up
       case '1':
         reportMessage = "You chose not to flag the S.S. Eternity report. This could be an oversight if the phantoms manifest again.";
         break;
