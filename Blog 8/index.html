@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Waterfall&display=swap" rel="stylesheet">
+    <title>Gold & Jules</title>
+    <style>
+        body {
+            background-color: #f0e5cc;
+            color: #0f0f0f;
+            font-family: 'Georgia', serif;
+            margin: 0;
+            padding: 0;
+            font-size: 16px;
+        }
+        main {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+        }
+        button {
+            background-color: #53535353;
+            color: #000000;
+            border: 1px;
+            padding: 5px 10px;
+            margin: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #555;
+        }
+        .minor-section h2 {
+            color: #000000;
+        }
+        .minor-section p {
+            text-indent: 20px;
+            margin-bottom: 15px;
+        }
+        .comment-section h2 {
+            color: #000000;
+        }
+        .comment-section p {
+            text-indent: 20px;
+            margin-bottom: 15px;
+        }
+        .comment-section {
+            margin-bottom: 20px;
+            border-bottom: 1px dashed #555;
+            padding-bottom: 10px;
+        }
+        .minor-section {
+            margin-bottom: 20px;
+            border-bottom: 1px dashed #555;
+            padding-bottom: 10px;
+        }
+        .story{
+            margin: 10px;
+            margin-bottom: 20px;
+            padding: 20px;
+            width: 100%;
+            border: ridge 4px rgb(182, 135, 229);
+            background-color: #f9f7ffe1;
+        }
+    </style>
+<script>
+    window.onload = function() {
+         document.body.addEventListener('mousedown', playClickSound);
+        };
+        function playClickSound() {
+        var audio = new Audio('click.mp3');
+        audio.play();
+    }
+  
+	function playAudio() {
+	  audio.play()
+		.then(() => {
+		  console.log("Audio playback started successfully");
+		})
+		.catch((error) => {
+		  console.error("Playback failed:", error);
+		});
+	}
+  
+	function toggleMute() {
+	  audio.muted = !audio.muted;
+	}
+	
+	// Listen for a user interaction event to play audio
+	document.addEventListener('click', playAudio, { once: true });
+  </script>
+  
+</head>
+<body>
+    <main id="content">
+        <button onclick="window.location.href='../index.html';">Back to Homepage</button>
+        <span style="font-family: 'Waterfall', cursive; color: #48006e; font-size: 32px; line-height: 5px"><h1>Gold & Jules</h1></span>
+        <span style="color: #48006e"><p>By Julia M.</p></span>
+        <div class ="story">
+        <span style="color: #48006e"><h2>Advice on Staging an Intervention?</h2></span>
+            <p>Hello, my shining readers! I’m writing about something a bit different today. I’m actually hoping some of you might be able to give me some advice. I’m not much of a video game person, but one of my best friends is. She always does this thing whenever a new game she likes comes out where she basically won’t talk about anything else for, like, several weeks. I used to find it a bit annoying, if I’m being honest, but I’ve gotten used to it, and now I think it’s a bit endearing, really. Or, at least, I usually do. This most recent game that she’s gotten into, though… well, something just seems off about it. I don’t know, maybe I just don’t get it, but it seems really weird.</p>
+            
+            <p>So, basically it’s this mobile game, and I think the name was some kind of play on “virtual” and “ritual.” It might have been Viritual but I’m not entirely sure. Anyway, it’s got some kind of occult theme? Which is fine, it’s not really my thing but my friend likes horror games so that makes sense. She said it was an “augmented reality game.” Basically, she’s supposed to go around to different places in the real world with the game open— kind of like that Pokemon game everyone got super into a few years ago— and then the game will play these creepy demonic voices through her headphones that give clues to solve puzzles in the game.</p>
+            
+            <p>I thought it was a little weird, but she seemed to be having fun! She got super into it, and kept trying to get me to play it, but even if I’d wanted to, I couldn’t find it in the app store. Maybe it’s not available on my phone? Or maybe it got taken down because people thought it was too creepy. I’m not really sure. Anyway, I’m glad I didn’t start playing it, because lately my friend has gotten super weird. First of all, she started getting this weird expression whenever she was listening to the voices from the game. And now, she’s been getting that expression sometimes even when she doesn’t have her headphones on. Whenever I ask her what’s going on, she says that she’s in the middle of a puzzle in the game, but last time it happened, she didn’t even have her phone with her.</p>
+            
+            <p>I’ve heard people talk about video game addictions before, could that be what’s happening to my friend? Do I need to stage an intervention? Any advice would be appreciated— I don’t really know much about this sort of thing, but I’m really worried about her.</p>
+        </div>
+    </main>
+</body>
+</html>

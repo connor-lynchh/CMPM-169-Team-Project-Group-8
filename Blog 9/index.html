@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- This title is used for tabs and bookmarks -->
+    <title>Ask Tech Support</title>
+
+    <!-- Use UTF character set, a good idea with any webpage -->
+    <meta charset="UTF-8" />
+    <!-- Set viewport so page remains consistently scaled w narrow devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Include Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+    <!-- Link to javascript files - DEFER waits until all elements are rendered -->
+    <!-- Use me for a JavaScript OOP Project -->
+    <script type="text/javascript" src="./js/project.js" defer></script>
+    <!-- Use me for a p5.js project -->
+    <script type="text/javascript" src="./js/sketch.js" defer></script>
+
+    <script>
+        window.onload = function() {
+            loadLocalStorage();
+            document.body.addEventListener('mousedown', playClickSound);
+        };
+
+        function playClickSound() {
+            var audio = new Audio('click.mp3');
+            audio.play();
+        }
+    </script>
+</head>
+
+<body class="bg-gray-100">
+    <!-- Style this page by changing the CSS in ../css/site.css or css/experiment.css -->
+    <main id="content" class="max-w-4xl mx-auto p-8">
+        <button type="button" onclick="window.location.href='../index.html';"
+            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Back to
+            Homepage</button>
+        <section class="mt-8">
+            <h1 class="text-3xl font-bold">Ask Tech Support</h1>
+            <div class="reddit-post bg-white shadow-md rounded-lg p-8 mt-4">
+                <div class="reddit-post-header flex items-center mb-4">
+                    <!-- Profile Picture for CrewmateFishy12 -->
+                   <!--<img src="fish.png" alt="Profile Picture" class="w-12 h-12 rounded-full">-->
+                    <div class="ml-4">
+                        <div class="reddit-post-title">
+                            <h2 class="text-xl font-semibold">Downloaded a game, but I think it's malware. Help?</h2>
+                        </div>
+                        <div class="reddit-post-meta flex items-center text-sm text-gray-600">
+                            <span class="mr-2">posted by <a href="#" class="text-blue-500">MalwareFromTheAppStore</a></span>
+                            <span>21 hours ago</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="reddit-post-content mt-4">
+                    <!-- Your blog content goes here -->
+                    <p class="mb-4">Hey Tech Support, sent this in on a placeholder account because honestly I’m feeling really stupid and I don’t want any of my friends or coworkers to find this. Anyway, I downloaded this horror game on my phone, it’s like an AR puzzle game about a demonic cult, it’s called Viritual. I played it for a bit, but I didn’t really like the audio requirement. I closed the game and didn’t really plan on opening it again. Only problem is, now whenever I’m trying to listen to music, this damn game starts up and suddenly instead of my music I’m listening to creepy demonic whispers about how I’m “running out of time” and “the ritual draws near” or whatever.
+                        Anyway, I’ve tried uninstalling the app on multiple occasions, but it keeps popping up on my home screen again. Anyone know how I can get malware off of my phone? I didn’t even know that iPhones could get malware, I even downloaded it from the App Store and everything. Anyway, any advice would be appreciated. I live in a small town, and the nearest Apple store is pretty far away, so I’d rather handle it myself if I can, but if I need to I’ll just bring it in and see if they can fix it at the store. Would that void my warranty?
+                        Thanks in advance, y’all!
+                        </p>
+                    <!-- Image gallery -->
+                </div>
+                <div class="reddit-post-footer flex justify-between items-center mt-4">
+                    <a href="#" class="text-blue-500">0 Comments</a>
+                    <a href="#" class="text-blue-500">Share</a>
+                </div>
+            </div>
+            <!-- Comment Section -->
+            
+        </section>
+
+        <!-- SPECIAL section -->
+        <section id="SPECIAL" class="hidden mt-8 bg-white shadow-md rounded-lg p-8">
+            <div class="special">
+                <div class="reddit-post-header flex items-center mb-4">
+                    <!-- Profile Picture for CrewmateFishy12 -->
+                    <img src="fish.png" alt="Profile Picture" class="w-12 h-12 rounded-full">
+                    <div class="ml-4">
+                        <h3 class="font-semibold">MalwareFromTheAppStore (Update)</h3>
+                        <p class="text-sm text-gray-600">1 hour ago</p>
+                    </div>
+                </div>
+                <p> Well, I called the Apple Store. They suggested that I should reset my phone to the factory settings. I don't really have much of anything important on it, so I did. It's still playing the Viritual audio. Anyone know where I can buy a cheap mp3 player?
+                </p>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
+

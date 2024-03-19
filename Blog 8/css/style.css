@@ -1,0 +1,38 @@
+/* style.css */
+
+/* Set the canvas element to be the full size of the window */
+canvas {
+    width: 100%;
+    height: 100%;
+}
+
+/* Center the canvas element on the page */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.waterfall-regular {
+    font-family: "Waterfall", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .story{
+    margin: auto;
+    margin-bottom: 20px;
+    padding: 10px;
+    width: 850px;
+    border: solid 1px black;
+    background-color: #fffad7e1;
+  }
+  
+h1{
+    color: #51008b;
+    font-family: "Waterfall", cursive;
+}
+
+#canvas-container {
+    width: 100%;
+    height: 600px;
+}
