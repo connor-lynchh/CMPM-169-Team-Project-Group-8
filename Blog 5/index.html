@@ -6,6 +6,24 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" href="./css/output.css">
 	<script src="./js/audio.js"></script>
+	<p id="current-time"></p>
+    <script>
+        function displayCurrentTime() {
+            var now = new Date();
+            var hours = now.getHours();
+            var minutes = now.getMinutes();
+            var seconds = now.getSeconds();
+            var ampm = hours >= 12 ? 'PM' : 'AM';
+            hours = hours % 12;
+            hours = hours ? hours : 12; // Handle midnight (0 hours)
+            minutes = minutes < 10 ? '0' + minutes : minutes;
+            seconds = seconds < 10 ? '0' + seconds : seconds;
+            var timeString = hours + ':' + minutes + ':' + seconds + ' ' + ampm;
+            document.getElementById('current-time').textContent = timeString;
+        }
+        displayCurrentTime();
+        setInterval(displayCurrentTime, 1000);
+    </script>
 </head>
 <body>
 	<main id="content">

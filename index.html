@@ -78,6 +78,25 @@
 							<p class="minorReport">Water bottle shortage</p> <hr>
 							<p class="minorReport">North American alligator farm found and captured</p> <hr>
 							<p class="minorReport">Missing kids found across continent</p> <hr>
+							<p id="current-time"></p>
+							<script>
+								function displayCurrentTime() {
+								var now = new Date();
+								var hours = now.getHours();
+								var minutes = now.getMinutes();
+								var seconds = now.getSeconds();
+								var ampm = hours >= 12 ? 'PM' : 'AM';
+								hours = hours % 12;
+								hours = hours ? hours : 12; // Handle midnight (0 hours)
+								minutes = minutes < 10 ? '0' + minutes : minutes;
+								seconds = seconds < 10 ? '0' + seconds : seconds;
+								var timeString = hours + ':' + minutes + ':' + seconds + ' ' + ampm;
+								document.getElementById('current-time').textContent = timeString;
+								}
+								displayCurrentTime();
+								// Update time every second
+								setInterval(displayCurrentTime, 1000);
+							</script>
 						</td>
       					<td width="1917" height="219"><table width="100%" height="100%" border="1">
        					<tbody>
