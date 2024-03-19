@@ -7,12 +7,14 @@ canvas {
 }
 
 /* Center the canvas element on the page */
+
 body {
     margin-top: 50px;
     margin-bottom: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: rgb(17, 17, 17);
 }
 
 button{
@@ -46,3 +48,16 @@ button{
   border: solid 1px black;
   background-color: #f1f1f1e1;
 }
+
+ 
+.left-image { 
+  float: left;
+  padding-bottom: 15px;
+  width: 250px;
+} 
+
+.right-image { 
+  float: right;
+  padding-bottom: 15px;
+  width: 250px;
+} 
