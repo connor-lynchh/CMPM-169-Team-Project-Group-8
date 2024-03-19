@@ -18,26 +18,7 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<script src="js/project.js"></script>
 </head>
-
-<p id="current-time"></p>
-    <script>
-        function displayCurrentTime() {
-            var now = new Date();
-            var hours = now.getHours();
-            var minutes = now.getMinutes();
-            var seconds = now.getSeconds();
-            var ampm = hours >= 12 ? 'PM' : 'AM';
-            hours = hours % 12;
-            hours = hours ? hours : 12; // Handle midnight (0 hours)
-            minutes = minutes < 10 ? '0' + minutes : minutes;
-            seconds = seconds < 10 ? '0' + seconds : seconds;
-            var timeString = hours + ':' + minutes + ':' + seconds + ' ' + ampm;
-            document.getElementById('current-time').textContent = timeString;
-        }
-	</script>
 	<script>
-        displayCurrentTime();
-        setInterval(displayCurrentTime, 1000);
 	window.onload = function() {
         loadLocalStorage();
         document.body.addEventListener('mousedown', playClickSound);
@@ -51,6 +32,24 @@
 
 <body>
 	<div> 
+		<p id="current-time"></p>
+    	<script>
+			function displayCurrentTime() {
+				var now = new Date();
+				var hours = now.getHours();
+				var minutes = now.getMinutes();
+				var seconds = now.getSeconds();
+				var ampm = hours >= 12 ? 'PM' : 'AM';
+				hours = hours % 12;
+				hours = hours ? hours : 12; // Handle midnight (0 hours)
+				minutes = minutes < 10 ? '0' + minutes : minutes;
+				seconds = seconds < 10 ? '0' + seconds : seconds;
+				var timeString = hours + ':' + minutes + ':' + seconds + ' ' + ampm;
+				document.getElementById('current-time').textContent = timeString;
+			}
+			displayCurrentTime();
+			setInterval(displayCurrentTime, 1000);
+		</script>
 		<img src="assets/puppy1.jpg" alt="puppy" class="left-image">
 		<img src="assets/rainforest.jpg" alt="rainforest" class="left-image">
 		<img src="assets/hello kitty.gif" alt="hello kitty" class="left-image">
