@@ -141,10 +141,35 @@ function LoadLocalStorage(){
   }
 }
 
+let reportList = [
+  "Earthquakes across Malaysia cause strange ruptures that look like a maple tree",
+  "Wild boars suddenly appear on Taiwan streets",
+  "Russian snow flurry slows down finally",
+  "Water bottle shortage",
+  "North American alligator farm found and captured",
+  "Missing kids found across continent",
+  "Los Angeles residents concerned about a “purple traffic light” spotted along their morning commute",
+  "Churches are outraged about popular new mobile game with “satanic influences”",
+  "Surge in missing cats attributed to increase in coyote population",
+  "San Francisco teens claim to have found an enormous skeleton on the beach",
+]
+let min = 0;
+let max = reportList.length;
+
 function ChangeMinorReports(){
   let x=document.getElementsByClassName("minorReport");  // Find the elements
+  let someList = [];
   for(var i = 0; i < x.length; i++){
-    console.log("found minor report");
+    //get item from reportList using random number
+    let randomNum = Math.floor((Math.random() * (max - min) + min));
+    let newReport = reportList[randomNum];
+    //keep finding new item if it already exists
+    while(someList.includes(randomNum)){
+      randomNum = Math.floor((Math.random() * (max - min) + min));
+      newReport = reportList[randomNum];
+    }
+    x[i].innerText = newReport;
+    someList.push(randomNum);
   }
 }
 
