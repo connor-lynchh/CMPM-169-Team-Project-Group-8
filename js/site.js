@@ -41,7 +41,8 @@ function loadLocalStorage(){
   }
 }
 
-function confirmFlag(btnID) {
+function confirmFlag(btnID) { //when you click "Flag for review"
+  console.log("confirm flag");
   // Show the confirmation modal
   document.getElementById('confirmationModal').style.display = 'flex';
 
@@ -52,16 +53,27 @@ function confirmFlag(btnID) {
   document.getElementById('confirmFlag').onclick = function() {
       flagPost(blogNumber);
   };
+  document.getElementById('cancelFlag').onclick = function() {
+    cancelFlag(blogNumber);
+};
 }
 
-function closeModal() {
+function closeModal() { //when the "confirmFlag() popup" disappears
+  console.log("close modal");
   document.getElementById('confirmationModal').style.display = 'none';
 }
 
-function flagPost(blogNumber) {
+function flagPost(blogNumber) { //when you choose to flag
   //change colors
+  console.log("flag post");
   closeModal();
   generateReport(blogNumber, true);
+}
+
+function cancelFlag(blogID){
+  console.log("cancel flag");
+  closeModal();
+  generateReport(blogID, false);
 }
 
 function generateReport(blogId, flagged) {
