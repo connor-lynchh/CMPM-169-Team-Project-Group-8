@@ -41,11 +41,6 @@ function loadLocalStorage(){
   }
 }
 
-function main() { //happens before any html object is created
-  console.log("site.js working");
-  //localStorage.clear();
-}
-
 function confirmFlag(btnID) {
   // Show the confirmation modal
   document.getElementById('confirmationModal').style.display = 'flex';
@@ -64,6 +59,7 @@ function closeModal() {
 }
 
 function flagPost(blogNumber) {
+  //change colors
   closeModal();
   generateReport(blogNumber, true);
 }
@@ -85,7 +81,7 @@ function generateReport(blogId, flagged) {
         break;
     }
   } else {
-    switch(blogId) { //never shows up
+    switch(blogId) { //never shows up because generateReport only happens if you flag and not if you don't flag
       case '1':
         reportMessage = "You chose not to flag the S.S. Eternity report. This could be an oversight if the phantoms manifest again.";
         break;
@@ -137,7 +133,10 @@ function resetFlagsAndReads() {
 
 
 
-
+function main() { //happens before any html object is created
+  console.log("site.js working");
+  //localStorage.clear();
+}
 
 // let's get this party started
 main();
