@@ -589,14 +589,6 @@
 <script type="text/javascript">
 		
         $(function(){
-                eathemes($(".container"), ".window", "everything2000s", 500)
-                $('.ok_button').click(function(){
-                    $(this).parent().parent().fadeOut();
-                })
-                $('.start_button').click(function(){
-                    $(this).toggleClass('sb_click')
-                    $('.start_menu').slideToggle()
-                })
                 function updateClock(){
                     var date = new Date();
                     var mins = date.getMinutes();
