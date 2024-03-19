@@ -40,6 +40,37 @@
 		alert("Please enter both username and password.");
 	  }
 	}
+
+	var flaggedPostsCount = 0;
+
+function buttonClick(id, color) {
+  // Get the button element
+  var button = document.getElementById(id);
+  // Change the button color based on the action
+  button.style.backgroundColor = color;
+
+  // If a post is flagged for review, increment the counter
+  if (color === '#009F18') { // Assuming green color means flagged
+	flaggedPostsCount++;
+  }
+  
+  // You can call the report generation function here or at a specific event
+  generateUserReport();
+}
+
+function generateUserReport() {
+  // Logic to generate a user report based on their actions
+  var report = "";
+  if (flaggedPostsCount === 0) {
+	report = "You haven't flagged any posts yet. Your vigilance can help shape the narrative of the supernatural!";
+  } else if (flaggedPostsCount < 5) {
+	report = "You've flagged a few posts, which helps us filter the fact from the fiction. Keep up the good work!";
+  } else {
+	report = "You're on a roll! Your diligent flagging contributes greatly to our understanding of the unexplained.";
+  }
+  // Display the report to the user
+  document.getElementById('userImpactReport').innerText = report;
+}
 	</script>
 
 <body>
@@ -86,7 +117,12 @@
         				</tbody>
       					</table></td>
    					 </tr>
-
+				
+				 <!-- User Impact Report Section -->
+				 <div id="userImpactReportSection" style="margin-top: 20px; padding: 15px; background-color: #333; color: white;">
+					<h2>User Impact Report</h2>
+					<p id="userImpactReport">Your actions have a real-world impact! Flagging posts helps us distinguish factual reports from fiction.</p>
+				  </div>
 				<!-- BLOGS/CASES/REPORTS TABLE -->
     			<tr>
       				<td><table width="100%" class="blogs-table">
