@@ -157,7 +157,7 @@ let reportList = [
   "New anti-aging cream linked to disorientation and strange hallucinations",
 ]
 
-let specialReportList = [  //the time or report dependent ones
+let specialReportList = [  //time or report dependent
   "WARNING: DO NOT LEAVE THE BUILDING. A TEMPORAL DISTORTION HAS BEEN DETECTED IN YOUR AREA", //day
   "Doctors perplexed by occurrences of severe sunburns after only a few minutes spent outdoors", //day
   "Los Angeles residents concerned about a “purple traffic light” spotted along their morning commute", //morning
@@ -169,7 +169,7 @@ let specialReportList = [  //the time or report dependent ones
   "Victim of mugging claims to have been “attacked by a vampire”", //night
   "WARNING: DO NOT ANSWER YOUR DOOR. RELIABLE REPORTS INDICATE AN ACTIVE VAMPIRE IN YOUR AREA", //night
   "Child in Maryland accidentally causes police investigation", //flag Blog 3
-  "National Park closed to the public after strange disappearances", //flagging Blog 6
+  "National Park closed to the public after strange disappearances", //flag Blog 6
   "Critics of popular game “Viritual” claim it has damaged their phones", //read blog 7
   "Rise in schizophrenia diagnoses linked with popular game “Viritual”", //read Blog 8
 ]
@@ -182,6 +182,14 @@ function ChangeMinorReports(){
     
     //random chance to use special report
     let whichType = Math.floor((Math.random() * (2 - 0))); //0-1
+    let randomNum = Math.floor(Math.random() * (reportList.length - 0));
+      while(minorList.includes(randomNum)){      //keep finding new item if it already exists
+        randomNum = Math.floor((Math.random() * (max - min) + min));
+      }
+      let newReport = reportList[randomNum];
+      x[i].innerText = newReport;
+      minorList.push(randomNum);
+    /*
     if(whichType == 0){
       let randomNum = Math.floor(Math.random() * (reportList.length - 0));
       while(minorList.includes(randomNum)){      //keep finding new item if it already exists
@@ -192,8 +200,8 @@ function ChangeMinorReports(){
       minorList.push(randomNum);
     }
     else{
-      let randomNum = Math.floor(Math.random() * (reportList.length - 0));
-      //SpecialMinorReportCheck()
+      let randomNum = Math.floor(Math.random() * (specialList.length - 0));
+      //SpecialMinorReportCheck(randomNum)
       while(specialList.includes(randomNum)){      //keep finding new item if it already exists
         randomNum = Math.floor((Math.random() * (max - min) + min));
       }
@@ -201,6 +209,7 @@ function ChangeMinorReports(){
       x[i].innerText = newReport;
       specialList.push(randomNum);
     }
+    */
   }
 }
 
@@ -223,6 +232,16 @@ function SpecialMinorReportCheck(num){ //checking if special report is possible
     case 7:
       break;
     case 8:
+      break;
+    case 9:
+      break;
+    case 10:
+      break;
+    case 11:
+      break;
+    case 12:
+      break;
+    case 13:
       break;
     default:
       return num;
