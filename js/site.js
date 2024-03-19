@@ -2,11 +2,12 @@
 
 // Functions
 
-// on button click: save the button's ID to local storage and change color
+// on button click for READ button: save the button's ID to local storage and change color
 function buttonClick(btnID, color){
   localStorage.setItem(btnID, "true");
   const btn = document.getElementById(btnID);
   btn.style.backgroundColor = color;
+  /*
   if(btnID.includes("review")){ //if button clicked is "Mark for review": change color of row
     const row = document.getElementById("row" + btnID[6]);
     row.style.backgroundColor = "#E5E4E2";
@@ -14,6 +15,7 @@ function buttonClick(btnID, color){
     row2.style.backgroundColor = "#E5E4E2";
     confirmFlag(btnID); // Call confirmFlag with the correct blog ID
   }
+  */
 }
 
 function loadLocalStorage(){
@@ -25,9 +27,9 @@ function loadLocalStorage(){
       btn.style.backgroundColor = "#009F18";
 
       //change color of row
-      const row = document.getElementById("row" + i);
+      const row = document.getElementById("row" + i); //row next to buttons
       row.style.backgroundColor = "#E5E4E2";
-      const row2 = document.getElementById("row" + i + "a");
+      const row2 = document.getElementById("row" + i + "a"); //row with the buttons
       row2.style.backgroundColor = "#E5E4E2";
     }
   }
@@ -41,8 +43,7 @@ function loadLocalStorage(){
   }
 }
 
-function confirmFlag(btnID) { //when you click "Flag for review"
-  console.log("confirm flag");
+function confirmFlag(btnID) { //when you click "Flag for review" but before actually flagging or canceling
   // Show the confirmation modal
   document.getElementById('confirmationModal').style.display = 'flex';
 
@@ -51,29 +52,33 @@ function confirmFlag(btnID) { //when you click "Flag for review"
 
   // When the user confirms, flag the post
   document.getElementById('confirmFlag').onclick = function() {
-      flagPost(blogNumber);
+      flagPost(btnID, true);
   };
   document.getElementById('cancelFlag').onclick = function() {
-    cancelFlag(blogNumber);
-};
+      flagPost(btnID, false);
+  };
 }
 
+//don't need to use this if it is just 1 line
 function closeModal() { //when the "confirmFlag() popup" disappears
-  console.log("close modal");
   document.getElementById('confirmationModal').style.display = 'none';
 }
 
-function flagPost(blogNumber) { //when you choose to flag
-  //change colors
-  console.log("flag post");
-  closeModal();
-  generateReport(blogNumber, true);
-}
-
-function cancelFlag(blogID){
-  console.log("cancel flag");
-  closeModal();
-  generateReport(blogID, false);
+function flagPost(blogNumber, boolean) { //when you click on "flag" or "cancel"
+  if(boolean){
+    //change colors
+    localStorage.setItem(blogNumber, "true");
+    const btn = document.getElementById(blogNumber);
+    btn.style.backgroundColor = "#009F18";
+    if(blogNumber.includes("review")){ //if button clicked is "Mark for review": change color of row
+      const row = document.getElementById("row" + blogNumber[6]);
+      row.style.backgroundColor = "#E5E4E2";
+      const row2 = document.getElementById("row" + blogNumber[6] + "a");
+      row2.style.backgroundColor = "#E5E4E2";
+    }
+  }
+  document.getElementById('confirmationModal').style.display = 'none';
+  generateReport(blogNumber, boolean);
 }
 
 function generateReport(blogId, flagged) {
