@@ -5,9 +5,6 @@ function confirmFlag(btnID) { //when you click "Flag for review" but before actu
   // Show the confirmation modal
   document.getElementById('confirmationModal').style.display = 'flex';
 
-  // Parse the blog number from the button ID
-  //const blogNumber = btnID.replace('review', '');
-
   // When the user confirms, flag the post
   document.getElementById('confirmFlag').onclick = function() {
       flagPost(btnID, true);
@@ -119,7 +116,7 @@ function resetFlagsAndReads() {
   location.reload();
 }
 
-function loadLocalStorage(){
+function LoadLocalStorage(){
   console.log("begin local storage")
   for(var i = 1; i <= 9; i++){ //changing review buttons
     let x = "review" + i;
@@ -141,6 +138,13 @@ function loadLocalStorage(){
       const btn = document.getElementById(x);
       btn.style.backgroundColor = "#A0A0A0";
     }
+  }
+}
+
+function ChangeMinorReports(){
+  let x=document.getElementsByClassName("minorReport");  // Find the elements
+  for(var i = 0; i < x.length; i++){
+    console.log("found minor report");
   }
 }
 

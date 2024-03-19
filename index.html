@@ -25,9 +25,11 @@
 		}
 
 		//load anything in local storage
-		loadLocalStorage();
+		LoadLocalStorage();
 		// Add event listener to play click sound on mouse click
 		document.body.addEventListener('mousedown', playClickSound);
+
+		ChangeMinorReports();
 	};
 
 	function login(event) { 
