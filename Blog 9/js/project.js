@@ -3,7 +3,7 @@ function loadLocalStorage(){
   const x = document.getElementById("SPECIAL"); //find a section with id: SPECIAL
   if(x){
       console.log("found special text");
-      if(localStorage.getItem("review1")){
+      if(localStorage.getItem("review9")){
           console.log("reveal special text");
           x.style.display = "block";
       }

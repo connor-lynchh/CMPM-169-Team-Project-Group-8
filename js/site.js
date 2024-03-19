@@ -59,10 +59,11 @@ function confirmFlag(btnID) { //when you click "Flag for review" but before actu
   };
 }
 
-//don't need to use this if it is just 1 line
+/*don't need to use this if it is just 1 line also "cancel" uses flagPost()
 function closeModal() { //when the "confirmFlag() popup" disappears
   document.getElementById('confirmationModal').style.display = 'none';
 }
+*/
 
 function flagPost(btnID, boolean) { //when you click on "flag" or "cancel"
   if(boolean){    //change colors
