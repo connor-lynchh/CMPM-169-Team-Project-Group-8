@@ -1,7 +1,16 @@
 <!DOCTYPE html>
 <html>
-
+    <script>
+        window.onload = function() {
+         document.body.addEventListener('mousedown', playClickSound);
+        };
+        function playClickSound() {
+        var audio = new Audio('click.mp3');
+        audio.play();
+    }
+    </script>
 <head>
+    
     <!-- This title is used for tabs and bookmarks -->
     <title>The Mystery of the S.S Eternity</title>
 
