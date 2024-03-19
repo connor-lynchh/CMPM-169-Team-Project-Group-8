@@ -184,22 +184,22 @@ function ChangeMinorReports(){
     let whichType = Math.floor((Math.random() * (2 - 0))); //0-1
     if(whichType == 0){
       let randomNum = Math.floor(Math.random() * (reportList.length - 0));
-      while(someList.includes(randomNum)){      //keep finding new item if it already exists
+      while(minorList.includes(randomNum)){      //keep finding new item if it already exists
         randomNum = Math.floor((Math.random() * (max - min) + min));
       }
       let newReport = reportList[randomNum];
       x[i].innerText = newReport;
-      someList.push(randomNum);
+      minorList.push(randomNum);
     }
     else{
       let randomNum = Math.floor(Math.random() * (reportList.length - 0));
       //SpecialMinorReportCheck()
-      while(someList.includes(randomNum)){      //keep finding new item if it already exists
+      while(specialList.includes(randomNum)){      //keep finding new item if it already exists
         randomNum = Math.floor((Math.random() * (max - min) + min));
       }
       let newReport = reportList[randomNum];
       x[i].innerText = newReport;
-      someList.push(randomNum);
+      specialList.push(randomNum);
     }
   }
 }
