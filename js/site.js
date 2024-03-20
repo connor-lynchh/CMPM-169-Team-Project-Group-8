@@ -225,7 +225,7 @@ function ChangeMinorReports(){
     
     else{
       let randomNum = SpecialMinorReportCheck();
-      while(specialList.includes(randomNum)){      //keep finding new item if it already exists
+      while(specialList.includes(randomNum)||randomNum==14){      //keep finding new item if it already exists or if it fails
         randomNum = SpecialMinorReportCheck();
       }
       x[i].innerText = specialReports[randomNum];
@@ -239,24 +239,34 @@ function SpecialMinorReportCheck(){ //checking if special report is possible
   let num = Math.floor(Math.random() * (specialReports.length - 0));
   switch(num){
     case 0: //day
+      return num;
       break;
     case 1:
+      return num;
       break;
     case 2:
+      return num;
       break;
     case 3:
+      return num;
       break;
     case 4:
+      return num;
       break;
     case 5:
+       return num;
       break;
     case 6:
+       return num;
       break;
     case 7:
+       return num;
       break;
     case 8:
+       return num;
       break;
     case 9:
+       return num;
       break;
     case 10:
       console.log("test review3")
@@ -264,6 +274,7 @@ function SpecialMinorReportCheck(){ //checking if special report is possible
         console.log("success review3")
         return num;
       }
+      break;
     case 11:
       console.log("test review6")
       if(localStorage.getItem("review6")){
@@ -277,16 +288,18 @@ function SpecialMinorReportCheck(){ //checking if special report is possible
         console.log("success read7")
         return num;
       }
+      break;
     case 13:
       console.log("test read8")
       if(localStorage.getItem("read8")){
         console.log("success read8")
         return num;
       }
+      break;
     default:
-      return num;
+      return 14;
   }
-  return num;
+  return 14;
 }
 
 function main() { //happens before any html object is created
