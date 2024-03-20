@@ -207,7 +207,7 @@ let specialReports = [  //time or report dependent
   "National Park closed to the public after strange disappearances", //flag Blog 6
   "Critics of popular game “Viritual” claim it has damaged their phones", //read blog 7
   "Rise in schizophrenia diagnoses linked with popular game “Viritual”", //read Blog 8
-"Report Unavailable"
+  "Temporal distortions disrupt popular websites"
 ]
 
 function ChangeMinorReports(){
@@ -239,7 +239,7 @@ function ChangeMinorReports(){
 }
 
 function SpecialMinorReportCheck(time){ //checking if special report is possible
-let num = Math.floor(Math.random() * (specialReports.length - 0));
+let num = Math.floor(Math.random() * (specialReports.length - 1));
   let timeOfDay = 0;
   if(time<6||time>=21){
   timeOfDay=4;
