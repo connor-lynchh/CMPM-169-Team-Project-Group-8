@@ -40,25 +40,25 @@ function generateReport(blogId, flagged) {
         reportMessage = "The studio's anomalies marked by your flag could uncover a bizarre phenomenon worth our attention.";
         break;
       case '3': // The empty houses
-        reportMessage = "Which blog will this go to who knows.";
+        reportMessage = "We sent teams to look into these houses and it turns out the author was most likely lying. The house we checked had a family of four living inside. Please do be more careful when reading other blogs as we will deduct from your pay for incorrect examinations.";
         break;
       case '4': // Deep in the Woods
-        reportMessage = "Which blog will this go to who knows.";
+        reportMessage = "Our sources tell us of other reports of the same incident occuring in these particular woods. While no one has still been able to identify the source of the sound we are still pursuing our leads until we have this anomaly discovered.";
         break;
       case '5': // Skinwalker
-        reportMessage = "Which blog will this go to who knows.";
+        reportMessage = "While sparse in the details we sent someone out to look into this skinwalker the author mentions. There is defenitely something afoot whether it be the skinwalker or something else but it will require more time to solve. Keep up the good work.";
         break;
       case '6': // Mayonaise national park
-        reportMessage = "Which blog will this go to who knows.";
+        reportMessage = "People talk about stories like these all the time. Usually it is a bear or some other animal that is hard to distinguish when it is nighttime. Do be more careful next time when reading these kinds of blogs as we will deduct pay and you might recieve a possible demotion";
         break;
       case '7': // Game review daily
-        reportMessage = "Which blog will this go to who knows.";
+        reportMessage = "While at first glance this blog may have been easily dismissed there have been a concerning number of other reports that have similar information. We are looking into shuting down blog posts like this one as a preventive measure so that no else decides to download this app. Keep looking out for these kinds of posts.";
         break;
       case '8': // Gold and Jules
-        reportMessage = "Which blog will this go to who knows.";
+        reportMessage = "This like many other blog posts recently have all been connected to this app, Viritual, that more and more people are finding and downloading. If you find other posts that are talking about this app be sure to flag the blog for review so we can take care of whatever is going on here.";
         break;
       case '9': // Ask Tech Support
-        reportMessage = "Which blog will this go to who knows.";
+        reportMessage = "It is good that you flagged this one for further review. We have been trying to gather as much information as we can about this Viritual app and the more evidence we can complie the better we can understand this phenomenon. Be on the look out for more blogs like this one.";
         break;
       default:
         reportMessage = "You've flagged a report. Our team will carefully review the details for supernatural activity.";
@@ -67,31 +67,31 @@ function generateReport(blogId, flagged) {
   } else {
     switch(blogId) {
       case '1': //
-        reportMessage = "You chose not to flag the S.S. Eternity report. This could be an oversight if the phantoms manifest again.";
+        reportMessage = "You chose not to flag the S.S. Eternity blog. This could be an oversight if the phantoms manifest again.";
         break;
       case '2': // strange thing in studio
         reportMessage = "Not flagging the studio's strange occurrences might be judicious, assuming they're mere quirks of the mundane.";
         break;
       case '3': // The empty houses
-        reportMessage = "Which blog will this go to who knows.";
+        reportMessage = "Good work identifying that the author was making up this story. Continue doing work like this and you will become a natural in no time.";
         break;
       case '4': // Deep in the Woods
-        reportMessage = "Which blog will this go to who knows.";
+        reportMessage = "Perhaps you may have been to hasty to not flag this blog. We have gathered other accounts that tell of the same stories as this blog. Please pay more attention to the details. Your pay will be deducted accordingly";
         break;
       case '5': // Skinwalker
-        reportMessage = "Which blog will this go to who knows.";
+        reportMessage = "We checked in on the couple a few months after the post and they no longer seem to be living at the same house. In fact the whereabouts of the two our currently unknown. We can only speculate about what might have happened as the couple might have moved due to other circumstances. We might look into this matter further but for the moment you made the right decision.";
         break;
       case '6': // Mayonaise national park
-        reportMessage = "Which blog will this go to who knows.";
+        reportMessage = "This is one of those prime examples of the woods getting the better of people during the night. After contacting park rangers and listening to other peoples stories we can confirm that the authors story in this blog is mere conjecture.";
         break;
       case '7': // Game review daily
-        reportMessage = "Which blog will this go to who knows.";
+        reportMessage = "A number of other reports have had similar experinces like the author in this article. We have reason to beleieve that this author and others are taking part in the supernatural. Your pay has been deducted for overlooking this blog.";
         break;
       case '8': // Gold and Jules
-        reportMessage = "Which blog will this go to who knows.";
+        reportMessage = "It has come to our attention that blogs such as this one have some merit to them. There have been many other reports coming in that recount the same ideas. The main thing that is propping up is the word Viritual the name of this app that is leading to strange phenomena. Please review the blogs more closely next time as we continue to monitor the situation.";
         break;
       case '9': // Ask Tech Support
-        reportMessage = "Which blog will this go to who knows.";
+        reportMessage = "This is one of the blogs that should not be ignored. We have been collecting information about the app called Viritual and we have reasons to beleive the stories people tell in these posts are real. This blog along with other like it will be shut down to stop the app from receving further recognition on the internet. Your pay has been deducted due to the oversight you have made.";
         break;
       // Repeat for other blog numbers
       default:
