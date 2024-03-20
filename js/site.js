@@ -176,7 +176,7 @@ function LoadLocalStorage(){
   }
 }
 
-let reportList = [
+let reports = [
   "Earthquakes across Malaysia cause strange ruptures that look like a maple tree",
   "Wild boars suddenly appear on Taiwan streets",
   "Russian snow flurry slows down finally",
@@ -192,7 +192,7 @@ let reportList = [
   "New anti-aging cream linked to disorientation and strange hallucinations",
 ]
 
-let specialReportList = [  //time or report dependent
+let specialReports = [  //time or report dependent
   "WARNING: DO NOT LEAVE THE BUILDING. A TEMPORAL DISTORTION HAS BEEN DETECTED IN YOUR AREA", //day
   "Doctors perplexed by occurrences of severe sunburns after only a few minutes spent outdoors", //day
   "Los Angeles residents concerned about a “purple traffic light” spotted along their morning commute", //morning
@@ -213,44 +213,32 @@ function ChangeMinorReports(){
   let x=document.getElementsByClassName("minorReport");  // Find the elements
   let minorList = []; let specialList = [];
   for(var i = 0; i < x.length; i++){
-    //get item from reportList using random number
-    
-    //random chance to use special report
-    let whichType = Math.floor((Math.random() * (2 - 0))); //0-1
-    let randomNum = Math.floor(Math.random() * (reportList.length - 0));
-      while(minorList.includes(randomNum)){      //keep finding new item if it already exists
-        randomNum = Math.floor((Math.random() * (max - min) + min));
-      }
-      let newReport = reportList[randomNum];
-      x[i].innerText = newReport;
-      minorList.push(randomNum);
-    /*
+    let whichType = Math.floor((Math.random() * (2 - 0))); //50% chance to use special report
     if(whichType == 0){
-      let randomNum = Math.floor(Math.random() * (reportList.length - 0));
+      let randomNum = Math.floor(Math.random() * (reports.length - 0));//get item from reportList using random number
       while(minorList.includes(randomNum)){      //keep finding new item if it already exists
-        randomNum = Math.floor((Math.random() * (max - min) + min));
+        randomNum = Math.floor((Math.random() * (reports.length - 0)));
       }
-      let newReport = reportList[randomNum];
-      x[i].innerText = newReport;
+      x[i].innerText = reports[randomNum];
       minorList.push(randomNum);
     }
+    
     else{
-      let randomNum = Math.floor(Math.random() * (specialList.length - 0));
-      //SpecialMinorReportCheck(randomNum)
+      let randomNum = SpecialMinorReportCheck();
       while(specialList.includes(randomNum)){      //keep finding new item if it already exists
-        randomNum = Math.floor((Math.random() * (max - min) + min));
+        randomNum = SpecialMinorReportCheck();
       }
-      let newReport = reportList[randomNum];
-      x[i].innerText = newReport;
+      x[i].innerText = specialReports[randomNum];
       specialList.push(randomNum);
     }
-    */
+    
   }
 }
 
-function SpecialMinorReportCheck(num){ //checking if special report is possible
+function SpecialMinorReportCheck(){ //checking if special report is possible
+  let num = Math.floor(Math.random() * (specialReports.length - 0));
   switch(num){
-    case 0:
+    case 0: //day
       break;
     case 1:
       break;
@@ -271,16 +259,34 @@ function SpecialMinorReportCheck(num){ //checking if special report is possible
     case 9:
       break;
     case 10:
-      break;
+      console.log("test review3")
+      if(localStorage.getItem("review3")){
+        console.log("success review3")
+        return num;
+      }
     case 11:
+      console.log("test review6")
+      if(localStorage.getItem("review6")){
+        console.log("success review6")
+        return num;
+      }
       break;
     case 12:
-      break;
+      console.log("test read7")
+      if(localStorage.getItem("read7")){
+        console.log("success read7")
+        return num;
+      }
     case 13:
-      break;
+      console.log("test read8")
+      if(localStorage.getItem("read8")){
+        console.log("success read8")
+        return num;
+      }
     default:
       return num;
   }
+  return num;
 }
 
 function main() { //happens before any html object is created
