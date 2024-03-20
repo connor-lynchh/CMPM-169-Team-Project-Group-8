@@ -33,15 +33,32 @@ function generateReport(blogId, flagged) {
 
    if (flagged) {
     switch(blogId) {
-      case '1':
-        reportMessage = "Flagging the S.S. Eternity's report is prudent; its spectral passengers may warrant an investigation. /n Hello new line here how is this working out hopefully good";
+      case '1': // S.S Eternity
+        reportMessage = "Flagging the S.S. Eternity's report is prudent; its spectral passengers may warrant an investigation. ";
         break;
-      case '2':
+      case '2': // Strange thing in studio
         reportMessage = "The studio's anomalies marked by your flag could uncover a bizarre phenomenon worth our attention.";
         break;
-      // Repeat for other blog numbers
-      case '3':
-        reportMessage = "The studio's anomalies marked by your flag could uncover a bizarre phenomenon worth our attention.";
+      case '3': // The empty houses
+        reportMessage = "Which blog will this go to who knows.";
+        break;
+      case '4': // Deep in the Woods
+        reportMessage = "Which blog will this go to who knows.";
+        break;
+      case '5': // Skinwalker
+        reportMessage = "Which blog will this go to who knows.";
+        break;
+      case '6': // Mayonaise national park
+        reportMessage = "Which blog will this go to who knows.";
+        break;
+      case '7': // Game review daily
+        reportMessage = "Which blog will this go to who knows.";
+        break;
+      case '8': // Gold and Jules
+        reportMessage = "Which blog will this go to who knows.";
+        break;
+      case '9': // Ask Tech Support
+        reportMessage = "Which blog will this go to who knows.";
         break;
       default:
         reportMessage = "You've flagged a report. Our team will carefully review the details for supernatural activity.";
@@ -49,14 +66,32 @@ function generateReport(blogId, flagged) {
     }
   } else {
     switch(blogId) {
-      case '1':
+      case '1': //
         reportMessage = "You chose not to flag the S.S. Eternity report. This could be an oversight if the phantoms manifest again.";
         break;
-      case '2':
+      case '2': // strange thing in studio
         reportMessage = "Not flagging the studio's strange occurrences might be judicious, assuming they're mere quirks of the mundane.";
         break;
-        case '3':
-        reportMessage = "Not flagging the studio's strange occurrences might be judicious, assuming they're mere quirks of the mundane.";
+      case '3': // The empty houses
+        reportMessage = "Which blog will this go to who knows.";
+        break;
+      case '4': // Deep in the Woods
+        reportMessage = "Which blog will this go to who knows.";
+        break;
+      case '5': // Skinwalker
+        reportMessage = "Which blog will this go to who knows.";
+        break;
+      case '6': // Mayonaise national park
+        reportMessage = "Which blog will this go to who knows.";
+        break;
+      case '7': // Game review daily
+        reportMessage = "Which blog will this go to who knows.";
+        break;
+      case '8': // Gold and Jules
+        reportMessage = "Which blog will this go to who knows.";
+        break;
+      case '9': // Ask Tech Support
+        reportMessage = "Which blog will this go to who knows.";
         break;
       // Repeat for other blog numbers
       default:
