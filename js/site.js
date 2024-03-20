@@ -207,6 +207,7 @@ let specialReports = [  //time or report dependent
   "National Park closed to the public after strange disappearances", //flag Blog 6
   "Critics of popular game “Viritual” claim it has damaged their phones", //read blog 7
   "Rise in schizophrenia diagnoses linked with popular game “Viritual”", //read Blog 8
+"Report Unavailable"
 ]
 
 function ChangeMinorReports(){
@@ -227,7 +228,7 @@ function ChangeMinorReports(){
     
     else{
       let randomNum = SpecialMinorReportCheck(tHour);
-      while(specialList.includes(randomNum)||randomNum==14){      //keep finding new item if it already exists or if it fails
+      while(specialList.includes(randomNum)){      //keep finding new item if it already exists or if it fails
         randomNum = SpecialMinorReportCheck(tHour);
       }
       x[i].innerText = specialReports[randomNum];
@@ -249,6 +250,7 @@ function SpecialMinorReportCheck(time){ //checking if special report is possible
   }else{
     timeOfDay=3;
   }
+	console.log("time is " + time + "which is in group " + timeOfDay);
   switch(num){
     case 0: //day
       console.log("test review " + num);
