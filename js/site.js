@@ -239,16 +239,19 @@ function ChangeMinorReports(){
 }
 
 function SpecialMinorReportCheck(time){ //checking if special report is possible
-  let num = Math.floor(Math.random() * (specialReports.length - 0));
-  let timeOfDay = 0;
+ let timeOfDay = 0;
   if(time<6||time>=21){
   timeOfDay=4;
+  let num = Math.floor(Math.random(7, specialReports.length)); 
   }else if(time<=10){
     timeOfDay=1;
+    let num = Math.floor(Math.random(2, specialReports.length)); 
   }else if(time<=16){
     timeOfDay=2;
+    let num = Math.floor(Math.random(0, specialReports.length));  
   }else{
     timeOfDay=3;
+    let num = Math.floor(Math.random(4, specialReports.length)); 
   }
 	console.log("time is " + time + "which is in group " + timeOfDay);
   switch(num){
