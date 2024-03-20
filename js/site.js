@@ -210,6 +210,8 @@ let specialReports = [  //time or report dependent
 ]
 
 function ChangeMinorReports(){
+  let whatTime = new Date();
+	let tHour = whatTime.getHours();
   let x=document.getElementsByClassName("minorReport");  // Find the elements
   let minorList = []; let specialList = [];
   for(var i = 0; i < x.length; i++){
@@ -224,9 +226,9 @@ function ChangeMinorReports(){
     }
     
     else{
-      let randomNum = SpecialMinorReportCheck();
+      let randomNum = SpecialMinorReportCheck(tHour);
       while(specialList.includes(randomNum)||randomNum==14){      //keep finding new item if it already exists or if it fails
-        randomNum = SpecialMinorReportCheck();
+        randomNum = SpecialMinorReportCheck(tHour);
       }
       x[i].innerText = specialReports[randomNum];
       specialList.push(randomNum);
@@ -235,38 +237,88 @@ function ChangeMinorReports(){
   }
 }
 
-function SpecialMinorReportCheck(){ //checking if special report is possible
+function SpecialMinorReportCheck(time){ //checking if special report is possible
   let num = Math.floor(Math.random() * (specialReports.length - 0));
+  let timeOfDay = 0;
+  if(time<6||time>=21){
+  timeOfDay=4;
+  }else if(time<=10){
+    timeOfDay=1;
+  }else if(time<=16){
+    timeOfDay=2;
+  }else{
+    timeOfDay=3;
+  }
   switch(num){
     case 0: //day
-      return num;
+      console.log("test review " + num);
+      if(timeOfDay==2){
+        console.log("success review " + num);
+        return num;
+      }
       break;
     case 1:
-      return num;
+      console.log("test review " + num);
+      if(timeOfDay==2){
+        console.log("success review " + num);
+        return num;
+      }
       break;
     case 2:
-      return num;
+      console.log("test review " + num);
+      if(timeOfDay==1){
+        console.log("success review " + num);
+        return num;
+      }
       break;
     case 3:
-      return num;
+      console.log("test review " + num);
+      if(timeOfDay==1||timeOfDay==2){
+        console.log("success review " + num);
+        return num;
+      }
       break;
     case 4:
-      return num;
+      console.log("test review " + num);
+      if(timeOfDay==3){
+        console.log("success review " + num);
+        return num;
+      }
       break;
     case 5:
-       return num;
+      console.log("test review " + num);
+       if(timeOfDay==3){
+         console.log("success review " + num);
+        return num;
+      }
       break;
     case 6:
-       return num;
+      console.log("test review " + num);
+       if(timeOfDay==3){
+         console.log("success review " + num);
+        return num;
+      }
       break;
     case 7:
-       return num;
+      console.log("test review " + num);
+       if(timeOfDay==4){
+         console.log("success review " + num);
+        return num;
+      }
       break;
     case 8:
-       return num;
+      console.log("test review " + num);
+       if(timeOfDay==4){
+         console.log("success review " + num);
+        return num;
+      }
       break;
     case 9:
-       return num;
+      console.log("test review " + num);
+       if(timeOfDay==4){
+         console.log("success review " + num);
+        return num;
+      }
       break;
     case 10:
       console.log("test review3")
