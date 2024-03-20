@@ -1,18 +1,18 @@
-# BRENDAN's PROJECT IDEA
-Brendan's idea of how this will look
-1. start at Homepage (describes company, job, or whatever)
-3. Homepage can go to blog A, blog B, blog V
-4. blog A/B/C can go to Homepage
-maybe play around with simple javascript so you can check off a blog to say that it was read
-when a blog is flagged it CAN cause a blog to change if it uses the javascript file from blog 3 as an example. Just needs to change it to review# with # being your blog number
+# Description:
+The EerieWatch Web Portal is an interactive storytelling interface. You are an employee at the company known as EerieWatch, and your job is to read and flag online descriptions of supernatural activity. As you interact with these stories, you may see news reports related to your activity appear on the left panel of the home page. Some (not all) stories may update after you have interacted with them, so try checking on them again to see how things turned out!
 
-## Blog Roles
-1. Kayla
-2. Atal
-3. Brendan | Homepage
-4. Connor | Homepage
-5. Nathan
-6. Nathan
-7. Adrian
-8. Adrian
-9. Adrian
+# Instructions:
+Any username and password will grant you access to the site. From there, you should see links to different web pages. Click the links to read the stories! Flag stories for review if you believe the supernatural elements described might be worth investigating. Otherwise, simply mark them as read.
+
+## Blog Authors
+1. The Mystery of the S.S. Eternity: Kayla
+2. I saw strange creatures in my Studio: Atal
+3. Game Reviews Daily: Adrian
+4. The Empty Houses: Brendan
+5. Deep in the Woods: Connor
+6. Skinwalker heard by Waifu: Nathan
+7. Gold & Jules: Adrian
+8. Mayonaise National Park: Nathan
+9. Ask Tech Support: Adrian
+
+Homepage: Adrian, Brendan, Connor
