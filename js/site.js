@@ -252,72 +252,72 @@ let num = Math.floor(Math.random() * (specialReports.length - 1));
   }
   switch(num){
     case 0: //day
-      console.log("test review " + num);
+    //  console.log("test review " + num);
       if(timeOfDay==2){
-        console.log("success review " + num);
+      //  console.log("success review " + num);
         return num;
       }
       break;
     case 1:
-      console.log("test review " + num);
+    //  console.log("test review " + num);
       if(timeOfDay==2){
-        console.log("success review " + num);
+     //   console.log("success review " + num);
         return num;
       }
       break;
     case 2:
-      console.log("test review " + num);
+     // console.log("test review " + num);
       if(timeOfDay==1){
-        console.log("success review " + num);
+      //  console.log("success review " + num);
         return num;
       }
       break;
     case 3:
-      console.log("test review " + num);
+     // console.log("test review " + num);
       if(timeOfDay==1||timeOfDay==2){
-        console.log("success review " + num);
+     //   console.log("success review " + num);
         return num;
       }
       break;
     case 4:
-      console.log("test review " + num);
+    //  console.log("test review " + num);
       if(timeOfDay==3){
-        console.log("success review " + num);
+    //    console.log("success review " + num);
         return num;
       }
       break;
     case 5:
-      console.log("test review " + num);
+     // console.log("test review " + num);
        if(timeOfDay==3){
-         console.log("success review " + num);
+      //   console.log("success review " + num);
         return num;
       }
       break;
     case 6:
-      console.log("test review " + num);
+    //  console.log("test review " + num);
        if(timeOfDay==3){
-         console.log("success review " + num);
+      //   console.log("success review " + num);
         return num;
       }
       break;
     case 7:
-      console.log("test review " + num);
+     // console.log("test review " + num);
        if(timeOfDay==4){
-         console.log("success review " + num);
+       //  console.log("success review " + num);
         return num;
       }
       break;
     case 8:
-      console.log("test review " + num);
+     // console.log("test review " + num);
        if(timeOfDay==4){
-         console.log("success review " + num);
+       //  console.log("success review " + num);
         return num;
       }
       break;
     case 9:
-      console.log("test review " + num);
+    //  console.log("test review " + num);
        if(timeOfDay==4){
-         console.log("success review " + num);
+     //    console.log("success review " + num);
         return num;
       }
       break;
