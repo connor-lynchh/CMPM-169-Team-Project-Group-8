@@ -213,7 +213,7 @@ let specialReports = [  //time or report dependent
 function ChangeMinorReports(){
   let whatTime = new Date();
 	let tHour = whatTime.getHours();
-  let x=document.getElementsByClassName("minorReport");  // Find the elements
+  let x = document.getElementsByClassName("minorReport");  // Find the elements
   let minorList = []; let specialList = [];
   for(var i = 0; i < x.length; i++){
     let whichType = Math.floor((Math.random() * (2 - 0))); //50% chance to use special report
@@ -225,16 +225,21 @@ function ChangeMinorReports(){
       x[i].innerText = reports[randomNum];
       minorList.push(randomNum);
     }
-    
     else{
       let randomNum = SpecialMinorReportCheck(tHour);
-      while(specialList.includes(randomNum)){      //keep finding new item if it already exists or if it fails
-        randomNum = SpecialMinorReportCheck(tHour);
+      if(specialList.includes(randomNum)){      //if it already exists then just put a normal minor report
+        let randomNum = Math.floor(Math.random() * (reports.length - 0));
+        while(minorList.includes(randomNum)){
+          randomNum = Math.floor((Math.random() * (reports.length - 0)));
+        }
+        x[i].innerText = reports[randomNum];
+        minorList.push(randomNum);
       }
-      x[i].innerText = specialReports[randomNum];
-      specialList.push(randomNum);
+      else{
+        x[i].innerText = specialReports[randomNum];
+        specialList.push(randomNum);
+      }
     }
-    
   }
 }
 
@@ -252,100 +257,72 @@ let num = Math.floor(Math.random() * (specialReports.length - 1));
   }
   switch(num){
     case 0: //day
-    //  console.log("test review " + num);
       if(timeOfDay==2){
-      //  console.log("success review " + num);
         return num;
       }
       break;
     case 1:
-    //  console.log("test review " + num);
       if(timeOfDay==2){
-     //   console.log("success review " + num);
         return num;
       }
       break;
     case 2:
-     // console.log("test review " + num);
       if(timeOfDay==1){
-      //  console.log("success review " + num);
         return num;
       }
       break;
     case 3:
-     // console.log("test review " + num);
       if(timeOfDay==1||timeOfDay==2){
-     //   console.log("success review " + num);
         return num;
       }
       break;
     case 4:
-    //  console.log("test review " + num);
       if(timeOfDay==3){
-    //    console.log("success review " + num);
         return num;
       }
       break;
     case 5:
-     // console.log("test review " + num);
        if(timeOfDay==3){
-      //   console.log("success review " + num);
         return num;
       }
       break;
     case 6:
-    //  console.log("test review " + num);
        if(timeOfDay==3){
-      //   console.log("success review " + num);
         return num;
       }
       break;
     case 7:
-     // console.log("test review " + num);
        if(timeOfDay==4){
-       //  console.log("success review " + num);
         return num;
       }
       break;
     case 8:
-     // console.log("test review " + num);
        if(timeOfDay==4){
-       //  console.log("success review " + num);
         return num;
       }
       break;
     case 9:
-    //  console.log("test review " + num);
        if(timeOfDay==4){
-     //    console.log("success review " + num);
         return num;
       }
       break;
     case 10:
-      console.log("test review3")
       if(localStorage.getItem("review3")){
-        console.log("success review3")
         return num;
       }
       break;
     case 11:
-      console.log("test review6")
       if(localStorage.getItem("review6")){
-        console.log("success review6")
         return num;
       }
       break;
     case 12:
-      console.log("test read7")
       if(localStorage.getItem("read7")){
-        console.log("success read7")
         return num;
       }
       break;
     case 13:
-      console.log("test read8")
       if(localStorage.getItem("read8")){
-        console.log("success read8")
         return num;
       }
       break;
